@@ -3,7 +3,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer style={{ padding: '10px', textAlign: 'center', background: '#333', color: '#fff', marginTop: '20px' }}>
+    <footer>
       <p>© anth</p>
     </footer>
   );
