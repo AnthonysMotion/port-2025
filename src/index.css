@@ -11,3 +11,88 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+
+/**/
+
+/* Overall layout */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header {
+  text-align: center;
+  background-color: #f8f8f8;
+  padding: 20px;
+}
+
+.portfolio {
+  display: flex;
+  flex-grow: 1;
+}
+
+/* Left, middle, right sections */
+.portfolio-left,
+.portfolio-middle,
+.portfolio-right {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Width distribution */
+.portfolio-left {
+  width: 25%;
+}
+
+.portfolio-middle {
+  width: 25%;
+}
+
+.portfolio-right {
+  width: 50%;
+}
+
+.rectangle,
+.square {
+  position: relative;
+}
+
+.rectangle {
+  height: 25%;
+}
+
+.square {
+  width: 100%;
+  padding-top: 100%;
+}
+
+.label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 2;
+  color: white;
+}
+
+/* Image fit */
+img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  transition: .3s ease;
+}
+
+img:hover {
+  filter: grayscale(100%);
+  transition: .3s ease;
+}
