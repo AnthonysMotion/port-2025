@@ -4,10 +4,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* portfolio grid */
@@ -51,6 +48,7 @@ code {
 .rectangle,
 .square {
   position: relative;
+  overflow: hidden;
 }
 
 .rectangle {
@@ -81,9 +79,15 @@ img {
   height: 100%;
   object-fit: cover;
   z-index: 1;
-  transition: .3s ease;
+  transition: transform 0.5s ease;
 }
 
-img:hover {
-  transition: .3s ease;
+.rectangle:hover img,
+.square:hover img {
+  transform: translateY(100%);
+}
+
+.rectangle,
+.square {
+  background-color: white; 
 }
