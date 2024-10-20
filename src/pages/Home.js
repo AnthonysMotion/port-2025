@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
@@ -13,6 +14,28 @@ const Home = () => {
   const leftColumnProjects = projects.filter(project => project.section === 'left');
   const middleColumnProjects = projects.filter(project => project.section === 'middle');
   const rightColumnProjects = projects.filter(project => project.section === 'right');
+
+  useEffect(() => {
+    const imageContainers = document.querySelectorAll('.rectangle, .square');
+
+    imageContainers.forEach(container => {
+      const img = container.querySelector('img');
+      
+      container.addEventListener('mouseenter', () => {
+        img.style.transform = 'translateY(100%)';
+      });
+
+      container.addEventListener('mouseleave', () => {
+        img.style.transition = 'none';
+        img.style.transform = 'translateY(-100%)';
+
+        setTimeout(() => {
+          img.style.transition = 'transform 0.5s ease';
+          img.style.transform = 'translateY(0)';
+        }, 10);
+      });
+    });
+  }, []);
 
   return (
     <div className="container">
