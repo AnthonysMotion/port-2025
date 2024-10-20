@@ -1,22 +1,17 @@
+/* universal */
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
+/* portfolio grid */
 
-
-/**/
-
-/* Overall layout */
 .container {
   display: flex;
   flex-direction: column;
@@ -34,7 +29,6 @@ code {
   flex-grow: 1;
 }
 
-/* Left, middle, right sections */
 .portfolio-left,
 .portfolio-middle,
 .portfolio-right {
@@ -42,7 +36,6 @@ code {
   flex-direction: column;
 }
 
-/* Width distribution */
 .portfolio-left {
   width: 25%;
 }
@@ -80,7 +73,6 @@ code {
   color: white;
 }
 
-/* Image fit */
 img {
   position: absolute;
   top: 0;
