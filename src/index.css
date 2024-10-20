@@ -93,6 +93,5 @@ img {
 }
 
 img:hover {
-  filter: grayscale(100%);
   transition: .3s ease;
 }
