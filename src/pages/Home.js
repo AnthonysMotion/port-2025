@@ -37,6 +37,8 @@ const Home = () => {
     });
   }, []);
 
+  
+
   return (
     <div className="container">
       <header className="header">
