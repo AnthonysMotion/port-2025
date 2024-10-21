@@ -41,7 +41,7 @@ footer {
   position: relative;
   z-index: 2;
   color: white;
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
   width: 100%;
 }
@@ -87,6 +87,17 @@ footer {
 
 .accent-3 img {
   width: 100%;
-  max-width: 150px;
+  max-width: 120px;
   margin-left: 25px;
+}
+
+.ph-font {
+  font-family: 'Redaction';
+  text-transform: none;
+  font-weight: 100;
+  color: var(--color-accent,#dcf263);
+}
+
+.ph-icon {
+  color: var(--color-accent,#dcf263);
 }
