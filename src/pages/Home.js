@@ -29,7 +29,7 @@ const Home = () => {
     <div className='container'>
       <div className='parallax-header'>
         <div className='hero' style={{ transform: `translateY(${offsetY * 0.5}px)` }}>
-          <h1>Hi, my name is Anthony</h1>
+          <h1>Design for the <span className='ph-font'>(future)</span><br /><span className='ph-icon'>🡒</span> with an impact now.</h1>
           <div className="accents" id="two">
             <div className="accent-1">
               <p>ART DIRECTION<br />WEB & DIGITAL DESIGN</p>
@@ -51,8 +51,8 @@ const Home = () => {
         </div>
         <img
           className='parallax-header-bg'
-          src='https://images.unsplash.com/photo-1533134486753-c833f0ed4866?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-          alt='Background'
+          src='https://images.unsplash.com/photo-1651085349238-75cac5c9258b?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+          alt='Background'h
           style={{ transform: `translateY(${offsetY * 0.3}px)` }}
         />
       </div>
