@@ -1,5 +1,4 @@
-import React from 'react';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
@@ -25,16 +24,34 @@ const Home = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  
+
   return (
     <div className='container'>
       <div className='parallax-header'>
         <div className='hero' style={{ transform: `translateY(${offsetY * 0.5}px)` }}>
           <h1>Hi, my name is Anthony</h1>
+          <div className="accents" id="two">
+            <div className="accent-1">
+              <p>ART DIRECTION<br />WEB & DIGITAL DESIGN</p>
+            </div>
+            <div className="accent-2">
+              <p>AUCKLAND<br />NEW ZEALAND</p>
+            </div>
+            <div className="accent-3">
+              <ul className="trusted-logos">
+                <li><p>PROUDLY<br />TRUSTED BY:</p></li>
+                <li>
+                  <a href="https://www.lenovo.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="/img/lenovo.png" alt="lenovo logo" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
         <img
           className='parallax-header-bg'
-          src='https://images.unsplash.com/photo-1729494130269-c5610ddbd300?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+          src='https://images.unsplash.com/photo-1533134486753-c833f0ed4866?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
           alt='Background'
           style={{ transform: `translateY(${offsetY * 0.3}px)` }}
         />
