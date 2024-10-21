@@ -1,5 +1,5 @@
 import React from 'react';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
@@ -15,67 +15,30 @@ const Home = () => {
   const middleColumnProjects = projects.filter(project => project.section === 'middle');
   const rightColumnProjects = projects.filter(project => project.section === 'right');
 
+  const [offsetY, setOffsetY] = useState(0);
+
+  const handleScroll = () => {
+    setOffsetY(window.pageYOffset);
+  };
+
   useEffect(() => {
-    const imageContainers = document.querySelectorAll('.rectangle, .square');
-
-    imageContainers.forEach(container => {
-      const img = container.querySelector('img');
-      
-      container.addEventListener('mouseenter', () => {
-        img.style.transform = 'translateY(100%)';
-      });
-
-      container.addEventListener('mouseleave', () => {
-        img.style.transition = 'none';
-        img.style.transform = 'translateY(-100%)';
-
-        setTimeout(() => {
-          img.style.transition = 'transform 0.5s ease';
-          img.style.transform = 'translateY(0)';
-        }, 10);
-      });
-    });
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   
-
   return (
-    <div className="container">
-      <header className="header">
-        <h1>hello</h1>
-      </header>
-
-      <section className="portfolio">
-        {/* Left section */}
-        <div className="portfolio-left">
-          {leftColumnProjects.map(project => (
-            <Link to={project.link} className={project.type} key={project.id}>
-              <div className="label">{project.title}</div>
-              <img src={project.imageUrl} alt={project.title} />
-            </Link>
-          ))}
+    <div className='container'>
+      <div className='parallax-header'>
+        <div className='hero' style={{ transform: `translateY(${offsetY * 0.5}px)` }}>
+          <h1>Hi, my name is Anthony</h1>
         </div>
-
-        {/* Middle section */}
-        <div className="portfolio-middle">
-          {middleColumnProjects.map(project => (
-            <Link to={project.link} className={project.type} key={project.id}>
-              <div className="label">{project.title}</div>
-              <img src={project.imageUrl} alt={project.title} />
-            </Link>
-          ))}
-        </div>
-
-        {/* Right section */}
-        <div className="portfolio-right">
-          {rightColumnProjects.map(project => (
-            <Link to={project.link} className={project.type} key={project.id}>
-              <div className="label">{project.title}</div>
-              <img src={project.imageUrl} alt={project.title} />
-            </Link>
-          ))}
-        </div>
-      </section>
+        <img
+          className='parallax-header-bg'
+          src='https://plus.unsplash.com/premium_photo-1728732559227-5ae28c0053f1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+          alt='Background'
+          style={{ transform: `translateY(${offsetY * 0.3}px)` }}
+        />
+      </div>
     </div>
   );
 };
