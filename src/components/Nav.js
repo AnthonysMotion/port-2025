@@ -26,6 +26,7 @@ const Nav = () => {
         </Link>
         <div className="links">
           <Link to="/about">About</Link>
+          <span className="nav-divider">/</span>
           <Link to="/contact">Contact</Link>
         </div>
         <div className="social-icons">
