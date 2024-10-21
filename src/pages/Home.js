@@ -29,7 +29,7 @@ const Home = () => {
     <div className='container'>
       <div className='parallax-header'>
         <div className='hero' style={{ transform: `translateY(${offsetY * 0.5}px)` }}>
-          <h1>Design for the <span className='ph-font'>(future)</span><br /><span className='ph-icon'>🡒</span> with an impact now.</h1>
+          <h1>Design for the <span className='ph-font'>( future )</span><br /><span className='ph-icon'>🡒</span> with an impact now.</h1>
           <div className="accents" id="two">
             <div className="accent-1">
               <p>ART DIRECTION<br />WEB & DIGITAL DESIGN</p>
