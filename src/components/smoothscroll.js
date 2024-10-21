@@ -6,7 +6,7 @@ const SmoothScroll = () => {
     const body = document.body;
     const scrollWrap = document.getElementsByClassName("container")[0];
     const height = scrollWrap.getBoundingClientRect().height - 1;
-    const speed = 0.1;
+    const speed = 0.08;
     
     let offset = 0;
     
