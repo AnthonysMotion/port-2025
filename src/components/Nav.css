@@ -1,0 +1,61 @@
+/* Nav.css */
+
+* {
+    text-decoration: none;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    transition: background-color 0.3s, padding 0.3s;
+    z-index: 1000;
+  }
+  
+  .navbar.scrolled {
+    background-color: white;
+    padding: 10px 40px;
+  }
+  
+  .navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .logo img {
+    height: 25px;
+    transition: filter 0.3s ease;
+  }
+  
+  .navbar.scrolled .logo img {
+    filter: invert(1);
+  }
+  
+  
+  .links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 15px;
+  }
+
+  .links a, .social-icons a i {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .navbar.scrolled .links a, .navbar.scrolled .social-icons a i {
+    color: black;
+  }
