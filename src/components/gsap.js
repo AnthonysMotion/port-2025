@@ -4,20 +4,28 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 export const animateText = () => {
-  gsap.fromTo(".hero h1 span", 
+  document.body.style.overflow = 'hidden';
+
+  const animationDuration = 2;
+
+  gsap.fromTo(".hero h1 .letter, .hero h1 span", 
     {
       y: 50,
       opacity: 0,
     }, 
     {
-      duration: 1,
+      duration: 0.6,
       y: 0,
       opacity: 1,
-      stagger: 0.1,
+      stagger: 0.04,
       ease: "power3.out",
-      delay: 0.9
+      delay: 0.9,
+      onComplete: () => {
+        document.body.style.overflow = '';
+      }
     }
   );
+  
 
   gsap.fromTo(".navbar img", 
     {
@@ -25,12 +33,12 @@ export const animateText = () => {
       opacity: 0,
     }, 
     {
-      duration: 1,
+      duration: animationDuration,
       y: 0,
       opacity: 1,
       stagger: 0.5,
       ease: "power3.out",
-      delay: 0
+      delay: 0,
     }
   );
 
@@ -40,12 +48,12 @@ export const animateText = () => {
       opacity: 0,
     }, 
     {
-      duration: 1,
+      duration: animationDuration,
       y: 0,
       opacity: 1,
       stagger: 0.2,
       ease: "power3.out",
-      delay: 0.3
+      delay: 0.3,
     }
   );
 
@@ -55,12 +63,12 @@ export const animateText = () => {
       opacity: 0,
     }, 
     {
-      duration: 1,
+      duration: animationDuration,
       y: 0,
       opacity: 1,
       stagger: 0.2,
       ease: "power3.out",
-      delay: 0.8
+      delay: 0.8,
     }
   );
 
@@ -70,12 +78,12 @@ export const animateText = () => {
       opacity: 0,
     }, 
     {
-      duration: 1,
+      duration: animationDuration,
       y: 0,
       opacity: 1,
       stagger: 0.2,
       ease: "power3.out",
-      delay: 1.2
+      delay: 1.2,
     }
   );
 
@@ -85,12 +93,12 @@ export const animateText = () => {
       opacity: 0,
     }, 
     {
-      duration: 1,
+      duration: animationDuration,
       y: 0,
       opacity: 1,
       stagger: 0.2,
       ease: "power3.out",
-      delay: 1.5
+      delay: 1.5,
     }
   );
 
@@ -100,12 +108,12 @@ export const animateText = () => {
       opacity: 0,
     }, 
     {
-      duration: 1,
+      duration: animationDuration,
       y: 0,
       opacity: 1,
       stagger: 0.2,
       ease: "power3.out",
-      delay: 1.8
+      delay: 1.8,
     }
   );
 };
