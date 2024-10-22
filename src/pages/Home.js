@@ -51,7 +51,6 @@ const Home = () => {
     document.title = "Anthony Thach | Work";
   }, []);
 
-
   return (
     <div className='container'>
       <div className='parallax-header'>
