@@ -47,6 +47,8 @@ const Home = () => {
 
   useEffect(() => {
     animateText();
+
+    document.title = "Anthony Thach | Work";
   }, []);
 
 
