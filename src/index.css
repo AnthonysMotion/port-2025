@@ -143,7 +143,6 @@ body {
 }
 
 .portfolio-item {
-  box-sizing: border-box;
   border: solid 0px #dcf263;
   transition: .3s ease;
 }
