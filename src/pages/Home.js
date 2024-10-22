@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { animateText } from '../components/gsap';
 
 const Home = () => {
   const projects = [
@@ -25,11 +26,15 @@ const Home = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    animateText(); // Call the animation function
+  }, []);
+
   return (
     <div className='container'>
       <div className='parallax-header'>
         <div className='hero' style={{ transform: `translateY(${offsetY * 0.5}px)` }}>
-          <h1>Design for the <span className='ph-font'>( future )</span><br /><span className='ph-icon'>🡒</span> with an impact now.</h1>
+          <h1><span>Design</span> <span>for</span> <span>the</span> <span className='ph-font'>( future )</span><br /><span className='ph-icon'>🡒</span> <span>with</span> <span>an</span> <span>impact</span> <span>now.</span></h1>
           <div className="accents" id="two">
             <div className="accent-1">
               <p>ART DIRECTION<br />WEB & DIGITAL DESIGN</p>
@@ -52,12 +57,12 @@ const Home = () => {
         <img
           className='parallax-header-bg'
           src='https://images.unsplash.com/photo-1651085349238-75cac5c9258b?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-          alt='Background'h
+          alt='Background'
           style={{ transform: `translateY(${offsetY * 1}px)` }}
         />
       </div>
       <div className='content-1'>
-        <iframe width="1920" height="1080" src="https://www.youtube.com/embed/6s7njaPa_Yw?si=sJYDbQnQRArjU9CC&controls=0&autoplay=1&mute=1&disablekb=1&modestbranding=1&playsinline=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="1920" height="1080" src="https://www.youtube.com/embed/6s7njaPa_Yw?si=sJYDbQnQRArjU9CC&controls=0&autoplay=1&mute=1&disablekb=1&modestbranding=1&playsinline=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
       </div>
     </div>
   );

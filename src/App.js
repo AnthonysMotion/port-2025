@@ -7,6 +7,14 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import SmoothScroll from './components/smoothscroll';
 
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+    
+import { TextPlugin } from "gsap/TextPlugin";
+
+
+gsap.registerPlugin(useGSAP,TextPlugin);
+
 function App() {
   return (
     <Router>
