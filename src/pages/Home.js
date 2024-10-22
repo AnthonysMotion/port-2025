@@ -100,8 +100,8 @@ const Home = () => {
         />
       </div>
       <div className='content-1'>
-        <iframe width="1920" height="1080" src="https://www.youtube.com/embed/6s7njaPa_Yw?si=sJYDbQnQRArjU9CC&controls=0&autoplay=1&mute=1&disablekb=1&modestbranding=1&playsinline=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-      </div>
+        <div class="youtube-container">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/6s7njaPa_Yw?si=wKx3vCVv9eBoPyHN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>        </div>      </div>
     </div>
   );
 };
