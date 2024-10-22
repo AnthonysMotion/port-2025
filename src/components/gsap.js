@@ -21,7 +21,6 @@ export const animateText = () => {
         ease: "power3.out",
     })
 
-  // Animate h1 content first
   gsap.fromTo(".hero h1 .letter, .hero h1 span", 
     {
       y: 50,
@@ -35,13 +34,11 @@ export const animateText = () => {
       ease: "power3.out",
       delay: 0.9,
       onComplete: () => {
-        // Set overflow back to normal after the animation
         document.body.style.overflow = '';
       }
     }
   );
 
-  // Animate h1 itself with scale effect
   gsap.fromTo(".hero h1", 
     {
       y: 50,
@@ -64,7 +61,6 @@ export const animateText = () => {
       }
     }
   );
-
 
   const additionalDelay = 3;
 
