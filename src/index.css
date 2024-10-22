@@ -1,5 +1,10 @@
 /* universal */
 
+*::selection {
+  color: black;
+  background-color: #dcf263;
+}
+
 body {
   margin: 0;
   font-family: "Rubik", sans-serif;
