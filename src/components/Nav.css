@@ -73,6 +73,8 @@
 .links a:hover {
   font-family: 'Redaction';
   color: #dcf263;
+  filter: blur(0.7px);
+  transition: .3s ease;
 }
 
 .social-icons {
@@ -83,6 +85,7 @@
 .social-icons a i:hover {
   animation: siHover .2s forwards;
   transition: none;
+  filter: blur(0.8px);
 }
 
 .social-icons a i:not(:hover) {
