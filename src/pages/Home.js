@@ -107,7 +107,8 @@ const Home = () => {
                 <li><p>PROUDLY<br />TRUSTED BY:</p></li>
                 <li>
                   <a href="https://www.lenovo.com/" target="_blank" rel="noopener noreferrer">
-                    <img src="/img/lenovo.png" alt="lenovo logo" />
+                    <img src={`${process.env.PUBLIC_URL}/img/lenovo.png`} alt="lenovo logo" />
+                    
                   </a>
                 </li>
               </ul>
