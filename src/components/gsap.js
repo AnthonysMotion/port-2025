@@ -19,13 +19,38 @@ export const animateText = () => {
       opacity: 1,
       stagger: 0.04,
       ease: "power3.out",
-      delay: 0.9,
+      delay: 0,
       onComplete: () => {
         document.body.style.overflow = '';
       }
     }
   );
+
+  gsap.fromTo(".hero h1",
+    {
+      scale: 1.5
+    },
+    {
+      scale: 1,
+      delay: 2,
+      duration: 1.5,
+      ease: "power3.out",
+    }
+  )
   
+  gsap.fromTo(".parallax-header-bg", 
+    {
+      opacity: 0,
+      scale: 2
+    },
+    {
+      opacity: 1,
+      duration: 2,
+      delay: 2,
+      scale: 1,
+      ease: "power3.out"
+    }
+  )
 
   gsap.fromTo(".navbar img", 
     {
@@ -38,7 +63,7 @@ export const animateText = () => {
       opacity: 1,
       stagger: 0.5,
       ease: "power3.out",
-      delay: 0,
+      delay: animationDuration,
     }
   );
 
@@ -53,7 +78,7 @@ export const animateText = () => {
       opacity: 1,
       stagger: 0.2,
       ease: "power3.out",
-      delay: 0.3,
+      delay: animationDuration + 0.3,
     }
   );
 
@@ -68,7 +93,7 @@ export const animateText = () => {
       opacity: 1,
       stagger: 0.2,
       ease: "power3.out",
-      delay: 0.8,
+      delay: animationDuration + 0.6,
     }
   );
 
@@ -83,7 +108,7 @@ export const animateText = () => {
       opacity: 1,
       stagger: 0.2,
       ease: "power3.out",
-      delay: 1.2,
+      delay: animationDuration + 1.5,
     }
   );
 
@@ -98,7 +123,7 @@ export const animateText = () => {
       opacity: 1,
       stagger: 0.2,
       ease: "power3.out",
-      delay: 1.5,
+      delay: animationDuration + 1.2,
     }
   );
 
@@ -113,7 +138,7 @@ export const animateText = () => {
       opacity: 1,
       stagger: 0.2,
       ease: "power3.out",
-      delay: 1.8,
+      delay: animationDuration + 0.9,
     }
   );
 };
