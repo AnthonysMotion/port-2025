@@ -49,6 +49,7 @@ const Home = () => {
     animateText();
   }, []);
 
+
   return (
     <div className='container'>
       <div className='parallax-header'>
