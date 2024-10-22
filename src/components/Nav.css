@@ -66,7 +66,7 @@
 
 .links a:hover {
   font-family: 'Redaction';
-  color: var(--color-accent, #dcf263);
+  color: #dcf263;
 }
 
 .navbar.scrolled .links a,
@@ -75,5 +75,46 @@
 }
 
 .nav-divider {
-  color: var(--color-accent, #dcf263);
+  color: #dcf263;
+}
+
+.links a {
+  font-family: "Rubik", sans-serif;
+  transition: font-family 0.6s ease;
+}
+
+.links a:hover {
+  animation: fontChange 0.6s ease forwards;
+}
+
+.links a:not(:hover) {
+  animation: fontRevert 0.6s ease forwards;
+}
+
+@keyframes fontChange {
+  0% {
+    font-family: "Rubik", sans-serif;
+  }
+  20% {
+    font-family: "Rubik", sans-serif;
+    font-style: italic;
+  }
+  30% {
+    font-family: 'Redaction', sans-serif;
+  }
+}
+
+@keyframes fontRevert {
+  0% {
+    font-family: "Redaction", sans-serif;
+    color: #dcf263;;
+  }
+  5% {
+    font-family: "Rubik", sans-serif;
+    font-style: italic;
+    color: #dcf263;;
+  }
+  10% {
+    font-family: 'Rubik', sans-serif;
+  }
 }
