@@ -22,7 +22,7 @@ const Nav = () => {
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="navbar-content">
         <Link to="/" className="logo">
-          <img src="/logo.png" alt="Logo" />
+          <img src={`${process.env.PUBLIC_URL}/logo.png`} alt="Logo" />
         </Link>
         <div className="links">
           <Link to="/about">About</Link>
@@ -30,7 +30,6 @@ const Nav = () => {
           <Link to="/contact">Contact</Link>
         </div>
         <div className="social-icons">
-          {/* Add your social media icons here */}
           <a href="https://x.com/anthonysmotion" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a>
           <a href="https://www.instagram.com/anthonysmotion/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
           <a href="https://www.linkedin.com/in/anthonythach/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>

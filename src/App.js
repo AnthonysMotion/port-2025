@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import React from 'react';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import Nav from './components/Nav';
 // import Footer from './components/Footer'; // Uncomment if needed
 import Home from './pages/Home';
@@ -14,7 +14,6 @@ import { TextPlugin } from "gsap/TextPlugin";
 gsap.registerPlugin(TextPlugin);
 
 function App() {
-
   return (
     <Router>
       <div>
