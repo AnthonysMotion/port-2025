@@ -8,11 +8,11 @@ export const animateText = () => {
 
   const animationDuration = 2;
 
-  gsap.fromTo(".hero h1 .letter, .hero h1 span", 
+  gsap.fromTo(".hero h1 .letter, .hero h1 span",
     {
       y: 50,
       opacity: 0,
-    }, 
+    },
     {
       duration: 0.6,
       y: 0,
@@ -37,8 +37,8 @@ export const animateText = () => {
       ease: "power3.out",
     }
   )
-  
-  gsap.fromTo(".parallax-header-bg", 
+
+  gsap.fromTo(".parallax-header-bg",
     {
       opacity: 0,
       scale: 2
@@ -52,11 +52,11 @@ export const animateText = () => {
     }
   )
 
-  gsap.fromTo(".navbar img", 
+  gsap.fromTo(".navbar img",
     {
       y: -50,
       opacity: 0,
-    }, 
+    },
     {
       duration: animationDuration,
       y: 0,
@@ -67,11 +67,11 @@ export const animateText = () => {
     }
   );
 
-  gsap.fromTo(".navbar-content .links a, .navbar-content .links span", 
+  gsap.fromTo(".navbar-content .links a, .navbar-content .links span",
     {
       y: -50,
       opacity: 0,
-    }, 
+    },
     {
       duration: animationDuration,
       y: 0,
@@ -82,11 +82,11 @@ export const animateText = () => {
     }
   );
 
-  gsap.fromTo(".navbar a i", 
+  gsap.fromTo(".navbar a i",
     {
       y: -50,
       opacity: 0,
-    }, 
+    },
     {
       duration: animationDuration,
       y: 0,
@@ -97,11 +97,11 @@ export const animateText = () => {
     }
   );
 
-  gsap.fromTo(".accent-1", 
+  gsap.fromTo(".accent-1",
     {
       y: 50,
       opacity: 0,
-    }, 
+    },
     {
       duration: animationDuration,
       y: 0,
@@ -112,11 +112,11 @@ export const animateText = () => {
     }
   );
 
-  gsap.fromTo(".accent-2", 
+  gsap.fromTo(".accent-2",
     {
       y: 50,
       opacity: 0,
-    }, 
+    },
     {
       duration: animationDuration,
       y: 0,
@@ -127,11 +127,11 @@ export const animateText = () => {
     }
   );
 
-  gsap.fromTo(".accent-3", 
+  gsap.fromTo(".accent-3",
     {
       y: 50,
       opacity: 0,
-    }, 
+    },
     {
       duration: animationDuration,
       y: 0,
@@ -141,4 +141,29 @@ export const animateText = () => {
       delay: animationDuration + 0.9,
     }
   );
+
+/*
+  const portfolioItems = gsap.utils.toArray(".portfolio-item");
+
+  portfolioItems.forEach(item => {
+    const title = item.querySelector('h3');
+  
+    gsap.fromTo(item,
+      {
+        opacity: 0,
+      },
+      { 
+        opacity: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: title,
+          start: 'top 80%',
+          end: 'top 20%',
+          toggleActions: 'play none none reverse',
+          once: false,
+        }
+      }
+    );
+  });
+*/
 };
