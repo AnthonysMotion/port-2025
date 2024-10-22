@@ -143,6 +143,7 @@ body {
 }
 
 .portfolio-item {
+  box-sizing: border-box;
   border: solid 0px #dcf263;
   transition: .3s ease;
 }
@@ -158,4 +159,21 @@ body {
 
 .portfolio-item:hover img {
   transform: scale(1.05);
+}
+
+.portfolio-slider {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+  border-top: solid 1px white;
+  border-bottom: solid 1px white;
+}
+
+.slider-text {
+  display: inline-flex;
+}
+
+.slider-text p {
+  margin-left: 10px;
 }
