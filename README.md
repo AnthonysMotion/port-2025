@@ -25,7 +25,7 @@ Attached is what the home/landing page currently looks like, at the time of writ
 
 ## Links
 
-This project is not completed and my current/old portfolio website is active at my domain.<br>
+This project is not yet completed; therefore, my current portfolio website is active at my domain.<br>
 
 However, I have deployed the project over at Github Pages for your viewing, which I have linked below - as well as my current portfolio website.
 
