@@ -31,7 +31,7 @@ footer {
 .container {
   position: relative;
   height: 100vh;
-  overflow: hidden;
+
 }
 
 .parallax-header {
@@ -71,7 +71,7 @@ footer {
   padding: 0 40px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end; 
+  align-items: flex-end;
   font-size: 20px;
   text-align: left;
 }
@@ -83,7 +83,7 @@ footer {
   flex-direction: column;
 }
 
-.accent-3 > ul {
+.accent-3>ul {
   display: flex;
   align-items: center;
   list-style: none;
@@ -101,14 +101,28 @@ footer {
   font-family: 'Redaction';
   text-transform: none;
   font-weight: 100;
-  color: var(--color-accent,#dcf263);
+  color: var(--color-accent, #dcf263);
 }
 
 .ph-icon {
-  color: var(--color-accent,#dcf263);
+  color: var(--color-accent, #dcf263);
 }
 
-.hero h1 .letter, .hero h1 span {
+.hero h1 .letter,
+.hero h1 span {
   display: inline-block;
   will-change: transform, opacity;
+}
+
+.youtube-container {
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 16/9;
+  pointer-events: none;
+}
+
+.youtube-container iframe {
+  width: 300%;
+  height: 100%;
+  margin-left: -100%;
 }
