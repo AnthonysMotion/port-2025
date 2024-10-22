@@ -8,20 +8,6 @@ export const animateText = () => {
 
   const animationDuration = 2;
 
-  gsap.fromTo(".parallax-header-bg",
-    {
-        opacity: 0,
-        scale: 2
-    },
-    {
-        duration: 3,
-        scale: 1,
-        opacity: 1,
-        delay: 2.8,
-        ease: "power3.out",
-    })
-
-  // Animate h1 content first
   gsap.fromTo(".hero h1 .letter, .hero h1 span", 
     {
       y: 50,
@@ -35,38 +21,11 @@ export const animateText = () => {
       ease: "power3.out",
       delay: 0.9,
       onComplete: () => {
-        // Set overflow back to normal after the animation
         document.body.style.overflow = '';
       }
     }
   );
-
-  // Animate h1 itself with scale effect
-  gsap.fromTo(".hero h1", 
-    {
-      y: 50,
-      opacity: 0,
-      scale: 1.5
-    }, 
-    {
-      duration: 0.9,
-      y: 0,
-      opacity: 1,
-      ease: "power3.out",
-      scale: 1.5,
-      onComplete: () => {
-        gsap.to(".hero h1", {
-          duration: 1.2,
-          scale: 1,
-          delay: 2,
-          ease: "power4.out"
-        });
-      }
-    }
-  );
-
-
-  const additionalDelay = 3;
+  
 
   gsap.fromTo(".navbar img", 
     {
@@ -79,7 +38,7 @@ export const animateText = () => {
       opacity: 1,
       stagger: 0.5,
       ease: "power3.out",
-      delay: additionalDelay,
+      delay: 0,
     }
   );
 
@@ -94,7 +53,7 @@ export const animateText = () => {
       opacity: 1,
       stagger: 0.2,
       ease: "power3.out",
-      delay: additionalDelay + 0.3,
+      delay: 0.3,
     }
   );
 
@@ -109,7 +68,7 @@ export const animateText = () => {
       opacity: 1,
       stagger: 0.2,
       ease: "power3.out",
-      delay: additionalDelay + 0.9,
+      delay: 0.8,
     }
   );
 
@@ -124,7 +83,7 @@ export const animateText = () => {
       opacity: 1,
       stagger: 0.2,
       ease: "power3.out",
-      delay: additionalDelay + 1.8,
+      delay: 1.2,
     }
   );
 
@@ -139,7 +98,7 @@ export const animateText = () => {
       opacity: 1,
       stagger: 0.2,
       ease: "power3.out",
-      delay: additionalDelay + 1.5,
+      delay: 1.5,
     }
   );
 
@@ -149,12 +108,12 @@ export const animateText = () => {
       opacity: 0,
     }, 
     {
-      duration: animationDuration + 1.5,
+      duration: animationDuration,
       y: 0,
       opacity: 1,
       stagger: 0.2,
       ease: "power3.out",
-      delay: additionalDelay + 1.2,
+      delay: 1.8,
     }
   );
 };
