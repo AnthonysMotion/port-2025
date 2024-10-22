@@ -1,5 +1,6 @@
 <div align="center">
-
+<br>
+  
 <img src="https://i.imgur.com/x5RScm8.png" width=25% alt="HospitalRun logo"/>
 
 <br><br/>
