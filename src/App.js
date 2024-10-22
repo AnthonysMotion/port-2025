@@ -5,7 +5,7 @@ import Nav from './components/Nav';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
-//import SmoothScroll from './components/smoothscroll';
+import SmoothScroll from './components/smoothscroll';
 import CustomCursor from './components/cursor';
 
 import { gsap } from "gsap";
@@ -20,6 +20,7 @@ function App() {
       <div>
         <Nav />
         <CustomCursor />
+        <SmoothScroll />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
