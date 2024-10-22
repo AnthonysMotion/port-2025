@@ -31,7 +31,7 @@
   /*background-color: white; */
   padding: 10px 40px;
   transition: 0.7s ease;
-  border-bottom: solid 1px rgba(255, 255, 255, 1);
+  /*border-bottom: solid 1px rgba(255, 255, 255, 1);*/
 }
 
 .navbar-content {
