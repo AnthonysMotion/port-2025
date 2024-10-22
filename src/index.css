@@ -102,3 +102,8 @@ footer {
 .ph-icon {
   color: var(--color-accent,#dcf263);
 }
+
+.hero h1 .letter, .hero h1 span {
+  display: inline-block;
+  will-change: transform, opacity;
+}
