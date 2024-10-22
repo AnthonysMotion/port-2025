@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { animateText } from '../components/gsap';
 
@@ -9,7 +9,7 @@ const Home = () => {
     { id: 3, title: 'One NZ Warriors', imageUrl: 'https://cdn.myportfolio.com/0f9e9020-150b-40de-ba95-b57990ef40f8/6e4e0b4c-89ba-4f56-a7a3-654385b7a47a_car_202x158.png?h=b967ce274f073ea09ef5b4020506ff62', hoverImageUrl: "https://cdn.myportfolio.com/0f9e9020-150b-40de-ba95-b57990ef40f8/9dda12b0-0938-421d-aec4-e256278501f4_rwc_0x0x1381x1080x1381.png?h=e9e50d8087c77b9937e8f595373d0213", link: '/project3' },
     { id: 4, title: 'Discord', imageUrl: 'https://cdn.myportfolio.com/0f9e9020-150b-40de-ba95-b57990ef40f8/01cbcc6f-8d19-4eaf-bb23-3916cf073b3b_rwc_23x0x1036x810x1036.png?h=bbe15df7c4cb9146dc527ce6f46dcd4c', hoverImageUrl: "https://cdn.myportfolio.com/0f9e9020-150b-40de-ba95-b57990ef40f8/0b0d75e4-790f-400e-a9c6-75d686515fdb_rwc_9x0x404x316x404.gif?h=b9b2c27fc6918c31b9d1e0e77013e936", link: '/project4' },
     { id: 5, title: 'Ninjas in Pyjamas', imageUrl: 'https://cdn.myportfolio.com/0f9e9020-150b-40de-ba95-b57990ef40f8/012fab4a-f0cf-4ddd-97f1-d52de50c4c8b_rwc_270x0x1381x1080x1381.png?h=6894b1db0dc161223cecba7eb94ef4cc', hoverImageUrl: "https://cdn.myportfolio.com/0f9e9020-150b-40de-ba95-b57990ef40f8/c84b43e7-9efe-4fa8-bb2a-48b2d200ff9d_rwc_127x34x342x268x342.gif?h=91d2ec78b78c6e6aa6b36a115770fdec", link: '/project5' },
-    { id: 5, title: 'XP Esports', imageUrl: 'https://cdn.myportfolio.com/0f9e9020-150b-40de-ba95-b57990ef40f8/1247b338-1797-4a97-858a-806887e93e22_car_202x158.jpg?h=2a655aea3d8976442080a08988489b5e', hoverImageUrl: "https://cdn.myportfolio.com/0f9e9020-150b-40de-ba95-b57990ef40f8/91bcff94-79ca-46e1-ba0e-6981aeddc761_rwc_79x0x404x316x404.gif?h=1f5f1cdcd62e591e07fa4b7185393134", link: '/project5' }
+    { id: 6, title: 'XP Esports', imageUrl: 'https://cdn.myportfolio.com/0f9e9020-150b-40de-ba95-b57990ef40f8/1247b338-1797-4a97-858a-806887e93e22_car_202x158.jpg?h=2a655aea3d8976442080a08988489b5e', hoverImageUrl: "https://cdn.myportfolio.com/0f9e9020-150b-40de-ba95-b57990ef40f8/91bcff94-79ca-46e1-ba0e-6981aeddc761_rwc_79x0x404x316x404.gif?h=1f5f1cdcd62e591e07fa4b7185393134", link: '/project5' }
   ];
 
   const [offsetY, setOffsetY] = useState(0);
@@ -18,6 +18,27 @@ const Home = () => {
   const handleScroll = () => {
     setOffsetY(window.pageYOffset);
   };
+
+  const sliderRef = useRef(null);
+  const speed = 1;
+
+  useEffect(() => {
+    const slider = sliderRef.current;
+    let position = -slider.offsetWidth;
+    slider.innerHTML += slider.innerHTML;
+
+    const animateSlider = () => {
+      position += speed;
+      slider.style.transform = `translateX(${position}px)`;
+
+      if (position > 0) {
+        position = -slider.offsetWidth / 2;
+      }
+    };
+
+    const interval = setInterval(animateSlider, 20);
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
@@ -98,6 +119,11 @@ const Home = () => {
         />
       </div>
       <div className='portfolio-section'>
+        <div className='portfolio-slider'>
+          <div className='slider-text' ref={sliderRef}>
+            <p>Excellent design, at scale and speed 🡒</p><p>Excellent design, at scale and speed 🡒</p><p>Excellent design, at scale and speed 🡒</p>
+          </div>
+        </div>
         <div className='portfolio-grid'>
           {projects.map(project => (
             <div key={project.id} className='portfolio-item'
