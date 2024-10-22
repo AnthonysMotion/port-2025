@@ -2,7 +2,7 @@
   "name": "port-2025",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://anthonysmotion.github.io/port2025",
+  "homepage": "https://AnthonysMotion.github.io/port-2025",
   "dependencies": {
     "@gsap/react": "^2.1.1",
     "@testing-library/jest-dom": "^5.17.0",
