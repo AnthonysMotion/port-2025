@@ -1,26 +1,25 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Nav from './components/Nav';
-//import Footer from './components/Footer';
+// import Footer from './components/Footer'; // Uncomment if needed
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
-import SmoothScroll from './components/smoothscroll';
+//import SmoothScroll from './components/smoothscroll';
+import CustomCursor from './components/cursor';
 
 import { gsap } from "gsap";
-import { useGSAP } from "@gsap/react";
-    
 import { TextPlugin } from "gsap/TextPlugin";
 
-
-gsap.registerPlugin(useGSAP,TextPlugin);
+gsap.registerPlugin(TextPlugin);
 
 function App() {
+
   return (
     <Router>
       <div>
         <Nav />
-        <SmoothScroll />
+        <CustomCursor />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -30,7 +29,5 @@ function App() {
     </Router>
   );
 }
-//
-//<Footer />
 
 export default App;
