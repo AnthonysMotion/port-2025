@@ -21,10 +21,7 @@ body {
 
 /* temp style */
 
-footer {
-  position: relative;
-  top: 200px;
-}
+
 
 /* hero */
 
@@ -114,15 +111,51 @@ footer {
   will-change: transform, opacity;
 }
 
-.youtube-container {
-  overflow: hidden;
-  width: 100%;
-  aspect-ratio: 16/9;
-  pointer-events: none;
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  padding: 0;
+  margin: 0;
+  width: 100vw;
 }
 
-.youtube-container iframe {
-  width: 300%;
-  height: 100%;
-  margin-left: -100%;
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: .3s ease;
+}
+
+.portfolio-item h3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  padding: 40px 40px;
+  margin: 0;
+  text-align: center;
+}
+
+.portfolio-item {
+  border: solid 0px #dcf263;
+  transition: .3s ease;
+}
+
+.portfolio-item:hover {
+  border: solid 25px #dcf263;
+  transition: .3s ease;
+}
+
+.portfolio-item img {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.05);
 }
