@@ -147,6 +147,7 @@ body {
   height: auto;
   display: block;
   transition: .3s ease;
+  overflow: hidden;
 }
 
 .portfolio-item h3 {
@@ -162,9 +163,11 @@ body {
 .portfolio-item {
   border: solid 0px #dcf263;
   transition: .3s ease;
+  overflow: hidden;
 }
 
 .portfolio-item:hover {
+  overflow: hidden;
   border: solid 25px #dcf263;
   transition: .3s ease;
 }
