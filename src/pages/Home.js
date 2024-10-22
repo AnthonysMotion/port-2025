@@ -27,14 +27,63 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    animateText(); // Call the animation function
+    animateText();
   }, []);
+
+  // Function to split text into spans for animation
+  const splitTextIntoSpans = (text) => {
+    return text.split('').map((char, index) => {
+      return (
+        <span key={index} className="letter">
+          {char}
+        </span>
+      );
+    });
+  };
 
   return (
     <div className='container'>
       <div className='parallax-header'>
         <div className='hero' style={{ transform: `translateY(${offsetY * 0.5}px)` }}>
-          <h1><span>Design</span> <span>for</span> <span>the</span> <span className='ph-font'>( future )</span><br /><span className='ph-icon'>🡒</span> <span>with</span> <span>an</span> <span>impact</span> <span>now.</span></h1>
+        <h1>
+  <span class="letter">D</span>
+  <span class="letter">e</span>
+  <span class="letter">s</span>
+  <span class="letter">i</span>
+  <span class="letter">g</span>
+  <span class="letter">n</span>
+  <span>&nbsp;</span>
+  <span class="letter">f</span>
+  <span class="letter">o</span>
+  <span class="letter">r</span>
+  <span>&nbsp;</span>
+  <span class="letter">t</span>
+  <span class="letter">h</span>
+  <span class="letter">e</span>
+  <span>&nbsp;</span>
+  <span class="ph-font">( future )</span><br />
+  <span class="ph-icon">🡒</span>
+  <span>&nbsp;</span>
+  <span class="letter">w</span>
+  <span class="letter">i</span>
+  <span class="letter">t</span>
+  <span class="letter">h</span>
+  <span>&nbsp;</span>
+  <span class="letter">a</span>
+  <span class="letter">n</span>
+  <span>&nbsp;</span>
+  <span class="letter">i</span>
+  <span class="letter">m</span>
+  <span class="letter">p</span>
+  <span class="letter">a</span>
+  <span class="letter">c</span>
+  <span class="letter">t</span>
+  <span>&nbsp;</span>
+  <span class="letter">n</span>
+  <span class="letter">o</span>
+  <span class="letter">w</span>
+  <span class="letter">.</span>
+</h1>
           <div className="accents" id="two">
             <div className="accent-1">
               <p>ART DIRECTION<br />WEB & DIGITAL DESIGN</p>
