@@ -12,8 +12,11 @@
 
 This project will serve as my portfolio website for 2025 and the forseeable future.<br>
 
-As it stands, my current portfolio website is barebones and out of date; not able to compete with the rest of the industry.<br>
-Therefor, a project to revamp my portfolio website is needed and thus, here you are reading this :)
+As it stands, my current portfolio website is barebones and out of date, unable to compete with the rest of the industry. It lacks the dynamic features and aesthetic appeal that potential clients and employers expect in today’s digital landscape.<br>
+
+The need for modernization is clear. A revamped portfolio website is essential to showcase my skills, projects, and achievements effectively. I aim to create a visually striking and user-friendly site that not only reflects my design and development abilities but also tells a compelling story about my journey and expertise.<br>
+
+Therefor, an effort to revamp my portfolio website is needed and thus, here you are reading this :)
 
 <img src="https://i.imgur.com/btHvrjG.png">
 
@@ -21,8 +24,8 @@ Attached is what the home/landing page currently looks like, at the time of writ
 
 ## Links
 
-As of writing this, this project is not completed and my current/old portfolio website is active at my domain.<br>
-However, I have deployed the project over at Github Pages which I have linked below, as well as my current portfolio website.
+This project is not completed and my current/old portfolio website is active at my domain.<br>
+However, I have deployed the project over at Github Pages for your viewing, which I have linked below - as well as my current portfolio website.
 
 - [Github Pages Deployment](https://anthonysmotion.github.io/port-2025/)
 - - Last Updated: 23/10/2024
