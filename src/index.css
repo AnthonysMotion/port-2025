@@ -1,5 +1,10 @@
 /* universal */
 
+html {
+  background-color: black;
+  color: white;
+}
+
 *::selection {
   color: black;
   background-color: #dcf263;
