@@ -78,15 +78,25 @@ const Home = () => {
     const handleFade = () => {
       const scrollPosition = window.scrollY;
       const windowHeight = window.innerHeight;
-
+  
       const fadeOpacity = 1 - (scrollPosition / windowHeight) * 3;
       const newOpacity = Math.max(0, Math.min(1, fadeOpacity));
-
+  
+      const minFontSize = 2;
+      const maxFontSize = 3;
+      const scrollFraction = scrollPosition / windowHeight;
+      const newFontSize = `${Math.max(minFontSize, Math.min(maxFontSize, minFontSize + (maxFontSize - minFontSize) * scrollFraction))}rem`;
+  
+      const maxBlur = 10;
+      const newBlur = `${Math.min(maxBlur, maxBlur * scrollFraction)}px`;
+  
       const hero = document.querySelector('.hero');
-      const accents = document.querySelector('.accents');
-
-      if (hero) hero.style.opacity = newOpacity;
-      if (accents) accents.style.opacity = newOpacity;
+  
+      if (hero) {
+        hero.style.opacity = newOpacity;
+        //hero.style.fontSize = newFontSize;
+        hero.style.filter = `blur(${newBlur})`;
+      }
     };
 
     window.addEventListener('scroll', handleFade);
