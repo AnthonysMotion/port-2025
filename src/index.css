@@ -239,16 +239,45 @@ footer {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.9);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.fullscreen-menu .menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+.fullscreen-menu .menu-links a {
+  color: white;
+  font-size: 42px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.fullscreen-menu .menu-social-icons i {
+  color: white;
+  display: inline-flex;
+  margin: 0 20px;
+  font-size: 42px;
 }
 
 .fullscreen-menu.open {
   opacity: 1;
   visibility: visible;
+}
+
+.navbar .menu-social-icons {
+  display: none;
 }
 
 /* responsive */
@@ -286,5 +315,13 @@ footer {
 
   .menu-icon {
     display: block;
+  }
+
+  .navbar .menu-social-icons {
+    display: block;
+  }
+
+  .navbar .logo {
+    z-index: 2222;
   }
 }
