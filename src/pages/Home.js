@@ -149,15 +149,15 @@ const Home = () => {
           style={{ transform: `translateY(${offsetY * 1}px)` }}
         />
       </div>
-      <div className='portfolio-section'>
+      <div className='mobile-portfolio-section'>
         <div className='portfolio-slider'>
           <div className='slider-text' ref={sliderRef}>
             <p>Excellent design, at scale and speed 🡒</p><p>Excellent design, at scale and speed 🡒</p><p>Excellent design, at scale and speed 🡒</p>
           </div>
         </div>
-        <div className='portfolio-grid'>
+        <div className='mobile-portfolio-grid'>
           {projects.map(project => (
-            <div key={project.id} className='portfolio-item'
+            <div key={project.id} className='mobile-portfolio-item'
               onMouseEnter={() => setHoveredProjectId(project.id)}
               onMouseLeave={() => setHoveredProjectId(null)}>
               <Link to={project.link}>

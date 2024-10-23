@@ -132,7 +132,7 @@ footer {
   will-change: transform, opacity;
 }
 
-.portfolio-grid {
+.mobile-portfolio-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0;
@@ -141,12 +141,12 @@ footer {
   width: 100vw;
 }
 
-.portfolio-item {
+.mobile-portfolio-item {
   position: relative;
   overflow: hidden;
 }
 
-.portfolio-item img {
+.mobile-portfolio-item img {
   width: 100%;
   height: auto;
   display: block;
@@ -154,7 +154,7 @@ footer {
   overflow: hidden;
 }
 
-.portfolio-item h3 {
+.mobile-portfolio-item h3 {
   position: absolute;
   top: 0;
   left: 0;
@@ -164,23 +164,23 @@ footer {
   text-align: center;
 }
 
-.portfolio-item {
+.mobile-portfolio-item {
   border: solid 0px #dcf263;
   transition: .3s ease;
   overflow: hidden;
 }
 
-.portfolio-item:hover {
+.mobile-portfolio-item:hover {
   overflow: hidden;
   border: solid 25px #dcf263;
   transition: .3s ease;
 }
 
-.portfolio-item img {
+.mobile-portfolio-item img {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.portfolio-item:hover img {
+.mobile-portfolio-item:hover img {
   transform: scale(1.05);
 }
 
@@ -282,6 +282,10 @@ footer {
 
 /* responsive */
 
+.mobile-portfolio-grid {
+  display: none;
+}
+
 @media only screen and (max-width: 1200px) {
   .accents {
     display: none;
@@ -289,6 +293,10 @@ footer {
 
   .hero h1 {
     font-size: 35px;
+  }
+
+  .mobile-portfolio-grid {
+    display: grid;
   }
 }
 
@@ -323,5 +331,9 @@ footer {
 
   .navbar .logo {
     z-index: 2222;
+  }
+
+  .mobile-portfolio-grid {
+    display: block;
   }
 }
