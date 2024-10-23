@@ -70,7 +70,7 @@
   transition: none;
 }
 
-.links a:hover {
+.links a:hover, .fullscreen-menu .menu-links a:hover {
   font-family: 'Redaction';
   color: #dcf263;
   filter: blur(0.7px);
@@ -82,13 +82,13 @@
   gap: 15px;
 }
 
-.social-icons a i:hover {
+.social-icons a i:hover, .fullscreen-menu .menu-social-icons i:hover, .menu-icon i:hover {
   animation: siHover .2s forwards;
   transition: none;
   filter: blur(0.8px);
 }
 
-.social-icons a i:not(:hover) {
+.social-icons a i:not(:hover), .fullscreen-menu .menu-social-icons i:not(:hover), .menu-icon i:not(:hover) {
   animation: siRevert .2s forwards;
   transition: none;
 }
@@ -108,11 +108,11 @@
   font-family: "Rubik", sans-serif;
 }
 
-.links a:hover {
+.links a:hover, .fullscreen-menu .menu-links a:hover {
   animation: fontChange 0.6s forwards;
 }
 
-.links a:not(:hover) {
+.links a:not(:hover), .fullscreen-menu .menu-links a:not(:hover) {
   animation: fontRevert 0.6s forwards;
 }
 
