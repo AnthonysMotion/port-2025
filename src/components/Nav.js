@@ -4,7 +4,7 @@ import './Nav.css';
 
 const Nav = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [logoSrc, setLogoSrc] = useState('/logo.png');
+  const [logoSrc, setLogoSrc] = useState(`${process.env.PUBLIC_URL}/logo.png`);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleScroll = () => {
@@ -33,8 +33,8 @@ const Nav = () => {
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="navbar-content">
         <Link to="/" className="logo"
-          onMouseEnter={() => setLogoSrc('/logo-2.png')}
-          onMouseLeave={() => setLogoSrc('/logo.png')}>
+          onMouseEnter={() => setLogoSrc(`${process.env.PUBLIC_URL}/logo-2.png`)}
+          onMouseLeave={() => setLogoSrc(`${process.env.PUBLIC_URL}/logo.png`)}>
           <img src={logoSrc} alt="Logo" />
         </Link>
         <div className="links">
