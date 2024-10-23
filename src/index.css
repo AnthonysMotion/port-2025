@@ -35,7 +35,7 @@ footer {
   width: 16px;
   height: 16px;
   background-color: transparent;
-  border: 1px white solid;
+  border: 1px solid white;
   border-radius: 50%;
   position: fixed;
   pointer-events: none;
@@ -45,11 +45,19 @@ footer {
 }
 
 .custom-cursor.hover {
-  width: 32px;
-  height: 32px;
-  background-color: white;
-  transform: translate(-50%, -50%) scale(1.2);
+  width: 70px;
+  height: 70px;
+  border: 2px solid #dcf263;
+  background-color: transparent;
+  opacity: 1;
+  filter: blur(2px);
+  transition: transform 0.4s ease, border 0.4s ease, width 0.4s ease, height 0.4s ease, opacity 0.3s ease;
 }
+
+.custom-cursor {
+  opacity: 0;
+}
+
 
 /* hero */
 

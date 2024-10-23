@@ -40,11 +40,10 @@ const CustomCursor = () => {
     };
 
     const handleMouseOut = (e) => {
-      // Ensure the hover effect is not applied for excluded elements
       if (
         (e.target.matches('a, button, input, textarea, select, img') ||
-         e.target.closest('a')?.querySelector('i')) && // Check for <i> tags within <a>
-        !e.target.classList.contains('parallax-header-bg') // Exclude the specific image class
+         e.target.closest('a')?.querySelector('i')) &&
+        !e.target.classList.contains('parallax-header-bg')
       ) {
         customCursor.classList.remove('hover');
         showCursor();
@@ -55,9 +54,8 @@ const CustomCursor = () => {
     document.addEventListener('mouseover', handleMouseOver);
     document.addEventListener('mouseout', handleMouseOut);
 
-    hideCursor(); // Start by hiding the cursor
+    hideCursor();
 
-    // Cleanup on component unmount
     return () => {
       document.removeEventListener('mousemove', handleMouseMove);
       document.removeEventListener('mouseover', handleMouseOver);
