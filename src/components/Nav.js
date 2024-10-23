@@ -32,9 +32,9 @@ const Nav = () => {
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="navbar-content">
-        <Link to="/" className="logo" 
-              onMouseEnter={() => setLogoSrc('/logo-2.png')}
-              onMouseLeave={() => setLogoSrc('/logo.png')}>
+        <Link to="/" className="logo"
+          onMouseEnter={() => setLogoSrc('/logo-2.png')}
+          onMouseLeave={() => setLogoSrc('/logo.png')}>
           <img src={logoSrc} alt="Logo" />
         </Link>
         <div className="links">
@@ -49,8 +49,20 @@ const Nav = () => {
 
         <div className={`fullscreen-menu ${isMenuOpen ? 'open' : ''}`}>
           <div className="menu-links">
+            <Link to="/" onClick={toggleMenu}>Home</Link>
             <Link to="/about" onClick={toggleMenu}>About</Link>
             <Link to="/contact" onClick={toggleMenu}>Contact</Link>
+          </div>
+          <div className="menu-social-icons">
+            <a href="https://x.com/anthonysmotion" target="_blank" rel="noopener noreferrer">
+              <i className="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/anthonysmotion/" target="_blank" rel="noopener noreferrer">
+              <i className="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/anthonythach/" target="_blank" rel="noopener noreferrer">
+              <i className="fa-brands fa-linkedin"></i>
+            </a>
           </div>
         </div>
 
