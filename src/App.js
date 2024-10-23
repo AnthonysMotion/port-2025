@@ -6,7 +6,8 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import SmoothScroll from './components/smoothscroll';
-import CustomCursor from './components/cursor';
+import CustomCursor from './components/cursor'
+import One from './pages/One';
 
 import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
@@ -25,6 +26,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/one" element={<One />} />
         </Routes>
         <Footer />
       </div>
