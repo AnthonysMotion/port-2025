@@ -5,6 +5,7 @@ import './Nav.css';
 const Nav = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [logoSrc, setLogoSrc] = useState('/logo.png');
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleScroll = () => {
     if (window.scrollY > 50) {
@@ -13,6 +14,15 @@ const Nav = () => {
       setIsScrolled(false);
     }
   };
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
@@ -32,6 +42,18 @@ const Nav = () => {
           <span className="nav-divider">/</span>
           <Link to="/contact">Contact</Link>
         </div>
+
+        <div className="menu-icon" onClick={toggleMenu}>
+          <i className={isMenuOpen ? 'fa fa-times' : 'fa fa-bars'}></i>
+        </div>
+
+        <div className={`fullscreen-menu ${isMenuOpen ? 'open' : ''}`}>
+          <div className="menu-links">
+            <Link to="/about" onClick={toggleMenu}>About</Link>
+            <Link to="/contact" onClick={toggleMenu}>Contact</Link>
+          </div>
+        </div>
+
         <div className="social-icons">
           <a href="https://x.com/anthonysmotion" target="_blank" rel="noopener noreferrer">
             <i className="fa-brands fa-x-twitter"></i>

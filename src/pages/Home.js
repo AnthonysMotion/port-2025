@@ -68,11 +68,11 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    animateText();
-
+    if (window.innerWidth > 600) {
+      animateText();
+    }
     document.title = "Anthony Thach | Work";
   }, []);
-
 
   return (
     <div className='container'>
