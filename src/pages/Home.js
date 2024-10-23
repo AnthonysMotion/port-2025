@@ -241,7 +241,7 @@ const Home = () => {
         </div>
       </div>
 
-
+        
 
       {/* mobile work */}
 
@@ -266,7 +266,8 @@ const Home = () => {
 
       {/* contact */}
 
-      
+      <h1>im fuckn goated</h1>
+      <p>hello main content here</p>
 
     </div>
   );

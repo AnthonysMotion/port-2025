@@ -8,6 +8,11 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import One from './pages/One';
+import Two from './pages/Two';
+import Three from './pages/Three';
+import Four from './pages/Four';
+import Five from './pages/Five';
+import Six from './pages/Six';
 
 import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
