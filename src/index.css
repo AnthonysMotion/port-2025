@@ -159,7 +159,6 @@ footer {
 /* desktop port */
 
 .works-section {
-  padding: 2rem;
   position: relative;
 }
 
@@ -179,7 +178,10 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   border: 1px solid transparent;
   transition: background-color 0.3s, border-color 0.3s;
   position: relative;
@@ -227,10 +229,15 @@ footer {
   width: 400px;
   height: auto;
   pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  position: absolute; 
+  z-index: 10;
 }
 
-
-
+.work-item:hover .hover-image {
+  opacity: 1;
+}
 
 
 

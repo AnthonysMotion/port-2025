@@ -207,39 +207,39 @@ const Home = () => {
         </div>
       </div>
       <div className="works-section" onMouseMove={handleMouseMove}>
-  <h2 style={{ textAlign: 'center', color: 'white' }}>FEATURED WORKS</h2>
-  <div className="works-container">
-    {projects.map((project) => (
-      <div
-        key={project.id}
-        className={`work-item ${hoveredItem === project.id ? 'active' : ''}`}
-        onMouseEnter={() => handleMouseEnter(project.id)}
-        onMouseLeave={handleMouseLeave}
-      >
-        <a href={project.link} style={{ color: 'inherit', textDecoration: 'none', display: 'flex', width: '100%' }}>
-          <p className="left-text">{project.brand}</p>
-          <h1>{project.title}</h1>
-          <p className="right-text">{project.type}</p>
-        </a>
-        {hoveredItem === project.id && (
-          <img
-            src={project.hoverImageUrl}
-            alt={project.title}
-            className="hover-image"
-            style={{
-              position: 'absolute',
-              top: -cursorPosition.y / 5,
-              left: cursorPosition.x / 2,
-              pointerEvents: 'none',
-              transition: 'transform 0.5s',
-              zIndex: 10,
-            }}
-          />
-        )}
+        <h2 style={{ textAlign: 'center', color: 'white' }}>FEATURED WORKS</h2>
+        <div className="works-container">
+          {projects.map((project) => (
+            <div
+              key={project.id}
+              className={`work-item ${hoveredItem === project.id ? 'active' : ''}`}
+              onMouseEnter={() => handleMouseEnter(project.id)}
+              onMouseLeave={handleMouseLeave}
+            >
+              <a href={project.link} style={{ color: 'inherit', textDecoration: 'none', display: 'flex', width: '100%' }}>
+                <p className="left-text">{project.brand}</p>
+                <h1>{project.title}</h1>
+                <p className="right-text">{project.type}</p>
+              </a>
+              {hoveredItem === project.id && (
+                <img
+                  src={project.hoverImageUrl}
+                  alt={project.title}
+                  className="hover-image"
+                  style={{
+                    position: 'absolute',
+                    top: -cursorPosition.y / 5,
+                    left: cursorPosition.x / 2,
+                    pointerEvents: 'none',
+                    transition: 'transform 0.5s',
+                    zIndex: 10,
+                  }}
+                />
+              )}
+            </div>
+          ))}
+        </div>
       </div>
-    ))}
-  </div>
-</div>
 
 
 
