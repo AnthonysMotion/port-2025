@@ -264,9 +264,6 @@ const Home = () => {
         </div>
       </div>
 
-      {/* contact */}
-
-      
 
     </div>
   );
