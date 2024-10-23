@@ -177,3 +177,17 @@
     color: white;
   }
 }
+
+@keyframes fontChange {
+  0% {
+    transform: scale(0.95);
+    font-family: "Rubik", sans-serif;
+  }
+  20% {
+    font-family: "Rubik", sans-serif;
+    font-style: italic;
+  }
+  30% {
+    font-family: 'Redaction', sans-serif;
+  }
+}
