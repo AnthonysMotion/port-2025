@@ -15,7 +15,7 @@ gsap.registerPlugin(TextPlugin);
 
 function App() {
   return (
-    <Router basename="/2025test"> {/* routing from /2025test */}
+    <Router>
       <div>
         <Nav />
         <CustomCursor />
