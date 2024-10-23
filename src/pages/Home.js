@@ -74,6 +74,30 @@ const Home = () => {
     document.title = "Anthony Thach | Work";
   }, []);
 
+  useEffect(() => {
+    const handleFade = () => {
+      const scrollPosition = window.scrollY;
+      const windowHeight = window.innerHeight;
+
+      const fadeOpacity = 1 - (scrollPosition / windowHeight) * 3;
+      const newOpacity = Math.max(0, Math.min(1, fadeOpacity));
+
+      const hero = document.querySelector('.hero');
+      const accents = document.querySelector('.accents');
+
+      if (hero) hero.style.opacity = newOpacity;
+      if (accents) accents.style.opacity = newOpacity;
+    };
+
+    window.addEventListener('scroll', handleFade);
+    return () => window.removeEventListener('scroll', handleFade);
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className='container'>
       <div className='parallax-header'>
@@ -128,16 +152,16 @@ const Home = () => {
               <ul className="trusted-logos">
                 <li><p>PROUDLY<br />TRUSTED BY:</p></li>
                 <div className='rotating-logo'>
-      <li>
-        <a href={images[currentImageIndex].link} target="_blank" rel="noopener noreferrer">
-          <img
-            className={fadeClass}
-            src={images[currentImageIndex].url}
-            alt={images[currentImageIndex].alt}
-          />
-        </a>
-      </li>
-    </div>
+                  <li>
+                    <a href={images[currentImageIndex].link} target="_blank" rel="noopener noreferrer">
+                      <img
+                        className={fadeClass}
+                        src={images[currentImageIndex].url}
+                        alt={images[currentImageIndex].alt}
+                      />
+                    </a>
+                  </li>
+                </div>
               </ul>
             </div>
           </div>
@@ -149,6 +173,11 @@ const Home = () => {
           style={{ transform: `translateY(${offsetY * 1}px)` }}
         />
       </div>
+
+      {/* main work */}
+
+      {/* mobile work */}
+
       <div className='mobile-portfolio-section'>
         <div className='portfolio-slider'>
           <div className='slider-text' ref={sliderRef}>
@@ -171,6 +200,8 @@ const Home = () => {
           ))}
         </div>
       </div>
+
+
     </div>
   );
 };
