@@ -26,7 +26,11 @@ body {
 
 /* temp style */
 
-/* Cursor.css */
+footer {
+  position: relative;
+  top: 2000px;
+}
+
 .custom-cursor {
   width: 16px;
   height: 16px;
@@ -195,4 +199,26 @@ body {
 
 .slider-text p {
   margin-left: 10px;
+}
+
+.rotating-logo {
+  position: relative;
+  top: -20px;
+  width: 130px;
+  margin-left: 25px;
+}
+
+.rotating-logo img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  transition: opacity 1s ease-in-out;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
 }

@@ -12,6 +12,28 @@ const Home = () => {
     { id: 6, title: 'XP Esports', imageUrl: 'https://cdn.myportfolio.com/0f9e9020-150b-40de-ba95-b57990ef40f8/1247b338-1797-4a97-858a-806887e93e22_car_202x158.jpg?h=2a655aea3d8976442080a08988489b5e', hoverImageUrl: "https://cdn.myportfolio.com/0f9e9020-150b-40de-ba95-b57990ef40f8/91bcff94-79ca-46e1-ba0e-6981aeddc761_rwc_79x0x404x316x404.gif?h=1f5f1cdcd62e591e07fa4b7185393134", link: '/project5' }
   ];
 
+  const images = [
+    { url: '/img/lenovo.png', link: 'https://www.lenovo.com/', alt: 'Lenovo' },
+    { url: '/img/microsoft.png', link: 'https://www.microsoft.com', alt: 'Microsoft' },
+    { url: '/img/vodafone.png', link: 'https://one.nz/', alt: 'Vodafone' },
+    { url: '/img/esl.png', link: 'https://eslfaceitgroup.com/', alt: 'ESL' }
+  ];
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [fadeClass, setFadeClass] = useState('visible');
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setFadeClass('hidden');
+      setTimeout(() => {
+        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+        setFadeClass('visible');
+      }, 1000);
+    }, 3000);
+
+    return () => clearInterval(intervalId);
+  }, [images.length]);
+
   const [offsetY, setOffsetY] = useState(0);
   const [hoveredProjectId, setHoveredProjectId] = useState(null);
 
@@ -105,12 +127,17 @@ const Home = () => {
             <div className="accent-3">
               <ul className="trusted-logos">
                 <li><p>PROUDLY<br />TRUSTED BY:</p></li>
-                <li>
-                  <a href="https://www.lenovo.com/" target="_blank" rel="noopener noreferrer">
-                    <img src={`${process.env.PUBLIC_URL}/img/lenovo.png`} alt="lenovo logo" />
-                    
-                  </a>
-                </li>
+                <div className='rotating-logo'>
+      <li>
+        <a href={images[currentImageIndex].link} target="_blank" rel="noopener noreferrer">
+          <img
+            className={fadeClass}
+            src={images[currentImageIndex].url}
+            alt={images[currentImageIndex].alt}
+          />
+        </a>
+      </li>
+    </div>
               </ul>
             </div>
           </div>
@@ -144,7 +171,6 @@ const Home = () => {
           ))}
         </div>
       </div>
-      <div className=''></div>
     </div>
   );
 };
