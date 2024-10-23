@@ -13,10 +13,10 @@ const Home = () => {
   ];
 
   const images = [
-    { url: '/img/lenovo.png', link: 'https://www.lenovo.com/', alt: 'Lenovo' },
-    { url: '/img/microsoft.png', link: 'https://www.microsoft.com', alt: 'Microsoft' },
-    { url: '/img/vodafone.png', link: 'https://one.nz/', alt: 'Vodafone' },
-    { url: '/img/esl.png', link: 'https://eslfaceitgroup.com/', alt: 'ESL' }
+    { url: `${process.env.PUBLIC_URL}/img/lenovo.png`, link: 'https://www.lenovo.com/', alt: 'Lenovo' },
+    { url: `${process.env.PUBLIC_URL}/img/microsoft.png`, link: 'https://www.microsoft.com', alt: 'Microsoft' },
+    { url: `${process.env.PUBLIC_URL}/img/vodafone.png`, link: 'https://one.nz/', alt: 'Vodafone' },
+    { url: `${process.env.PUBLIC_URL}/img/esl.png`, link: 'https://eslfaceitgroup.com/', alt: 'ESL' }
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
