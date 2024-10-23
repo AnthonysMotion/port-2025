@@ -44,6 +44,13 @@ footer {
   transform: translate(-50%, -50%);
 }
 
+.custom-cursor.hover {
+  width: 32px;
+  height: 32px;
+  background-color: white;
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
 /* hero */
 
 .container {

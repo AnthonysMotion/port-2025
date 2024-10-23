@@ -141,29 +141,4 @@ export const animateText = () => {
       delay: animationDuration + 0.9,
     }
   );
-
-/*
-  const portfolioItems = gsap.utils.toArray(".portfolio-item");
-
-  portfolioItems.forEach(item => {
-    const title = item.querySelector('h3');
-  
-    gsap.fromTo(item,
-      {
-        opacity: 0,
-      },
-      { 
-        opacity: 1,
-        duration: 1,
-        scrollTrigger: {
-          trigger: title,
-          start: 'top 80%',
-          end: 'top 20%',
-          toggleActions: 'play none none reverse',
-          once: false,
-        }
-      }
-    );
-  });
-*/
 };

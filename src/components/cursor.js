@@ -1,27 +1,26 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 const CustomCursor = () => {
-  useEffect(() => {
-    const customCursor = document.createElement('div');
-    customCursor.classList.add('custom-cursor');
-    document.body.appendChild(customCursor);
+  const cursorRef = useRef(null);
 
+  useEffect(() => {
+    const customCursor = cursorRef.current;
     let cursorVisible = true;
     let timeout;
 
-    function showCursor() {
+    const showCursor = () => {
       if (!cursorVisible) {
         customCursor.style.opacity = '1';
         cursorVisible = true;
       }
       clearTimeout(timeout);
       timeout = setTimeout(hideCursor, 1000);
-    }
+    };
 
-    function hideCursor() {
+    const hideCursor = () => {
       customCursor.style.opacity = '0';
       cursorVisible = false;
-    }
+    };
 
     const handleMouseMove = (e) => {
       customCursor.style.left = `${e.clientX}px`;
@@ -30,16 +29,23 @@ const CustomCursor = () => {
     };
 
     const handleMouseOver = (e) => {
-      const tagNamesToTrack = ['A', 'BUTTON', 'INPUT', 'SELECT', 'TEXTAREA', 'IMG'];
-      if (tagNamesToTrack.includes(e.target.tagName)) {
+      if (
+        (e.target.matches('a, button, input, textarea, select, img') ||
+         e.target.closest('a')?.querySelector('i')) &&
+        !e.target.classList.contains('parallax-header-bg')
+      ) {
         customCursor.classList.add('hover');
         showCursor();
       }
     };
 
     const handleMouseOut = (e) => {
-      const tagNamesToTrack = ['A', 'BUTTON', 'INPUT', 'SELECT', 'TEXTAREA', 'IMG'];
-      if (tagNamesToTrack.includes(e.target.tagName)) {
+      // Ensure the hover effect is not applied for excluded elements
+      if (
+        (e.target.matches('a, button, input, textarea, select, img') ||
+         e.target.closest('a')?.querySelector('i')) && // Check for <i> tags within <a>
+        !e.target.classList.contains('parallax-header-bg') // Exclude the specific image class
+      ) {
         customCursor.classList.remove('hover');
         showCursor();
       }
@@ -49,18 +55,17 @@ const CustomCursor = () => {
     document.addEventListener('mouseover', handleMouseOver);
     document.addEventListener('mouseout', handleMouseOut);
 
-    hideCursor();
+    hideCursor(); // Start by hiding the cursor
 
-    // Cleanup the event listeners on component unmount
+    // Cleanup on component unmount
     return () => {
       document.removeEventListener('mousemove', handleMouseMove);
       document.removeEventListener('mouseover', handleMouseOver);
       document.removeEventListener('mouseout', handleMouseOut);
-      document.body.removeChild(customCursor);
     };
   }, []);
 
-  return null; // This component doesn't render any JSX
+  return <div ref={cursorRef} className="custom-cursor" />;
 };
 
 export default CustomCursor;
