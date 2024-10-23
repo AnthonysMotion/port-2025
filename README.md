@@ -43,3 +43,5 @@ However, I have deployed the project over at Github Pages for your viewing, whic
 - CSS
 - GSAP
 - VsCode
+
+### 1656 lines of code
