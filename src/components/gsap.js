@@ -47,7 +47,7 @@ export const animateText = () => {
       opacity: 1,
       duration: 2,
       delay: 2,
-      scale: 1,
+      scale: 1.1,
       ease: "power3.out"
     }
   )

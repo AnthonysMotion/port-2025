@@ -1,5 +1,10 @@
 /* universal */
 
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
 * {
   cursor: none;
 }
@@ -21,15 +26,9 @@ body {
   font-size: 1.25rem;
   font-weight: 700;
   text-transform: uppercase;
-  min-height: 300vh;
 }
 
 /* temp style */
-
-footer {
-  position: relative;
-  top: 2000px;
-}
 
 .custom-cursor {
   width: 16px;
@@ -88,12 +87,13 @@ footer {
 .parallax-header-bg {
   position: absolute;
   top: 0;
+  bottom: 0;
+  right: 0;
   left: 0;
-  width: 100%;
-  height: 120vh;
-  object-fit: cover;
-  z-index: 1;
+  width: 100vw;
+  z-index: -1;
   transform: translate3d(0, 0, 0);
+  filter: blur(6px);
 }
 
 .accents {
@@ -113,7 +113,6 @@ footer {
 .accent-2,
 .accent-3 {
   display: flex;
-  flex-direction: column;
 }
 
 .accent-3>ul {
@@ -145,6 +144,7 @@ footer {
 .hero h1 span {
   display: inline-block;
   will-change: transform, opacity;
+  filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.2));
 }
 
 .mobile-portfolio-grid {
@@ -260,6 +260,7 @@ footer {
 .mobile-portfolio-item {
   position: relative;
   overflow: hidden;
+  overflow: hidden;
 }
 
 .mobile-portfolio-item img {
@@ -267,6 +268,7 @@ footer {
   height: auto;
   display: block;
   transition: .3s ease;
+  overflow: hidden;
   overflow: hidden;
 }
 
@@ -278,6 +280,7 @@ footer {
   padding: 40px 40px;
   margin: 0;
   text-align: center;
+  overflow: hidden;
 }
 
 .mobile-portfolio-item {
@@ -294,6 +297,7 @@ footer {
 
 .mobile-portfolio-item img {
   transition: transform 0.3s ease, opacity 0.3s ease;
+  overflow: hidden;
 }
 
 .mobile-portfolio-item:hover img {
@@ -400,6 +404,27 @@ footer {
 
 .mobile-portfolio-grid {
   display: none;
+  overflow: hidden;
+}
+
+.parallax-header-bg {
+  position: "absolute";
+  top: 0;
+  left: 0;
+  width: "auto";
+  height: "100%";
+  min-Width: "100%";
+  z-Index: -1;
+  border: "none";
+  overflow: "hidden";
+}
+
+@media only screen and (max-width: 1500px) {
+  .parallax-header-bg {
+    height: 120%;
+    width: 150%;
+    overflow: hidden;
+  }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -413,10 +438,29 @@ footer {
 
   .mobile-portfolio-grid {
     display: grid;
+    max-width: 100%;
   }
 
   .works-section {
     display: none;
+  }
+
+  .parallax-header-bg {
+    top: -200px;
+    left: -190px;
+    height: 160%;
+    width: 210%;
+    overflow: hidden;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .parallax-header-bg {
+    top: -200px;
+    left: -500px;
+    height: 140%;
+    width: 260%;
+    overflow: hidden;
   }
 }
 
@@ -456,8 +500,30 @@ footer {
   .mobile-portfolio-grid {
     display: block;
   }
+
+  .parallax-header-bg {
+    left: -600px;
+    height: 140%;
+    width: 400%;
+    overflow: hidden;
+  }
 }
 
+.contact-section {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.contact-section h3 {
+  max-width: 40%;
+}
+
+.contact-section span {
+  font-family: "Redaction";
+  text-transform: none;
+  font-size: 32px;
+  color: #dcf263;
+}
 
 /* animations */
 
@@ -487,4 +553,10 @@ footer {
   10% {
     font-family: 'Rubik', sans-serif;
   }
+}
+
+footer {
+  padding: 2rem;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }

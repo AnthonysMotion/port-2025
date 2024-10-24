@@ -1,6 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { animateText } from '../components/gsap';
+import Footer from '../components/Footer';
+
 
 const Home = () => {
   const projects = [
@@ -82,10 +84,10 @@ const Home = () => {
       const fadeOpacity = 1 - (scrollPosition / windowHeight) * 3;
       const newOpacity = Math.max(0, Math.min(1, fadeOpacity));
 
-      const minFontSize = 2;
-      const maxFontSize = 3;
+      //const minFontSize = 2;
+      //const maxFontSize = 3;
       const scrollFraction = scrollPosition / windowHeight;
-      const newFontSize = `${Math.max(minFontSize, Math.min(maxFontSize, minFontSize + (maxFontSize - minFontSize) * scrollFraction))}rem`;
+      //const newFontSize = `${Math.max(minFontSize, Math.min(maxFontSize, minFontSize + (maxFontSize - minFontSize) * scrollFraction))}rem`;
 
       const maxBlur = 10;
       const newBlur = `${Math.min(maxBlur, maxBlur * scrollFraction)}px`;
@@ -191,12 +193,16 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <img
-          className='parallax-header-bg'
-          src='https://images.unsplash.com/photo-1651085349238-75cac5c9258b?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-          alt='Background'
-          style={{ transform: `translateY(${offsetY * 1}px)` }}
-        />
+        <iframe
+  className='parallax-header-bg'
+  title='header_bg'
+  src="https://www.youtube.com/embed/lBQgF1R_5Yg?controls=0&autoplay=1&mute=1&modestbranding=1&showinfo=0&fs=0&rel=0&loop=1&playlist=lBQgF1R_5Yg"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+
       </div>
 
       {/* main work */}
@@ -241,8 +247,6 @@ const Home = () => {
         </div>
       </div>
 
-        
-
       {/* mobile work */}
 
       <div className='mobile-portfolio-section'>
@@ -265,10 +269,7 @@ const Home = () => {
       </div>
 
       {/* contact */}
-
-      <h1>im fuckn goated</h1>
-      <p>hello main content here</p>
-
+      <Footer />
     </div>
   );
 };
