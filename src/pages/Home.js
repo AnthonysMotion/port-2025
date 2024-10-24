@@ -125,6 +125,8 @@ const Home = () => {
     setHoveredItem(null);
   };
 
+
+
   return (
     <div className='container'>
       <div className='parallax-header'>
@@ -196,11 +198,12 @@ const Home = () => {
         <iframe
           className='parallax-header-bg'
           title='header_bg'
-          src="https://www.youtube.com/embed/5c8tMyRE_ik?controls=0&autoplay=1&mute=1&modestbranding=1&showinfo=0&fs=0&rel=0&loop=1"
+          src="https://www.youtube.com/embed/5c8tMyRE_ik?controls=0&autoplay=1&mute=1&modestbranding=1&showinfo=0&fs=0&rel=0&start=3&loop=1&playlist=5c8tMyRE_ik"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         ></iframe>
+
 
 
       </div>
@@ -250,7 +253,6 @@ const Home = () => {
       {/* mobile work */}
 
       <div className='mobile-portfolio-section'>
-
         <div className='mobile-portfolio-grid'>
           {projects.map(project => (
             <div key={project.id} className='mobile-portfolio-item'
@@ -268,7 +270,17 @@ const Home = () => {
         </div>
       </div>
 
-      {/* contact */}
+      {/* promo section 1 */}
+
+      <div className='promo-section-one'>
+        <h1>
+          {/*           <span className="promo-letter">I'm</span> <span className="promo-letter">a</span> <span className="promo-letter color">digital</span> <span className="promo-letter color">designer</span> <span className="promo-letter">who </span> <span className="promo-letter">offers</span> <span className="promo-letter">integrated</span> <span className="promo-letter">design</span> <span className="promo-letter">solutions</span> <span className="promo-letter">that</span> <span className="promo-letter">explore</span> <span className="promo-letter">the</span> <span className="promo-letter">digital-branding </span> <span className="promo-letter">nexus.</span><br /><br /> <span className="promo-letter">I</span> <span className="promo-letter">extract</span> <span className="promo-letter">beauty</span> <span className="promo-letter">from </span> <span className="promo-letter">purpose</span> <span className="promo-letter">to</span> <span className="promo-letter">get</span> <span className="promo-letter">your</span> <span className="promo-letter">brand </span> <span className="promo-letter color">higher</span><span className="promo-letter">,</span> <span className="promo-letter">your</span> <span className="promo-letter">vision</span> <span className="promo-letter color">farther</span><span className="promo-letter">,</span> <span className="promo-letter">and</span> <span className="promo-letter">your</span> <span className="promo-letter">impact</span> <span className="promo-letter color">harder</span><span className="promo-letter">.</span> */}
+          <span className="promo-letter">I</span> <span className="promo-letter">extract</span> <span className="promo-letter">beauty</span> <span className="promo-letter">from </span> <span className="promo-letter">purpose</span> <span className="promo-letter">to</span> <span className="promo-letter">get</span> <span className="promo-letter">your</span> <span className="promo-letter">brand </span> <span className="promo-letter color">higher</span><span className="promo-letter">,</span> <span className="promo-letter">your</span> <span className="promo-letter">vision</span> <span className="promo-letter color">farther</span><span className="promo-letter">,</span> <span className="promo-letter">and</span> <span className="promo-letter">your</span> <span className="promo-letter">impact</span> <span className="promo-letter color">harder</span><span className="promo-letter">.</span>
+        </h1>
+      </div>
+
+
+
       <Footer />
     </div>
   );
