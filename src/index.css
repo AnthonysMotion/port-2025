@@ -92,7 +92,6 @@ body {
   height: 110%;
   min-width: 100%;
   z-index: -1;
-  /*filter: blur(6px) brightness(0.3);*/
   border: none;
   overflow: hidden;
 }
@@ -515,6 +514,27 @@ body {
   color: #dcf263;
 }
 
+.promo-section-one {
+  padding: 2rem;
+}
+
+.promo-section-one h1 {
+  max-width: 70%;
+  font-size: 5rem;
+  position: relative;
+  line-height: 150%;
+}
+
+.promo-letter {
+  display: inline-block; 
+  will-change: transform, opacity;
+}
+
+.color {
+  color: #dcf263;
+}
+
+
 /* animations */
 
 @keyframes workFontChange {
@@ -547,6 +567,5 @@ body {
 
 footer {
   padding: 2rem;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  border-top: solid 1px white;
 }
