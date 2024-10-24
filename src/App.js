@@ -1,34 +1,23 @@
 import React from 'react';
-import { HashRouter as Router, Route, Routes } from 'react-router-dom';
-import Nav from './components/Nav';
-import Footer from './components/Footer';
-import Home from './pages/Home';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import SmoothScroll from './components/smoothscroll';
-import CustomCursor from './components/cursor'
-import One from './pages/One';
-
+import { BrowserRouter as Router } from 'react-router-dom';
 import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
+import Nav from './components/Nav';
+import CustomCursor from './components/cursor';
+import AnimatedRoutes from './components/AnimatedRoutes';
 
 gsap.registerPlugin(TextPlugin);
 
 function App() {
   return (
     <Router>
-      <div>
+      <div id="root">
         <Nav />
         <CustomCursor />
-        <SmoothScroll />
-        
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/one" element={<One />} />
-        </Routes>
-        <Footer />
+
+        <main className="main-content">
+          <AnimatedRoutes />
+        </main>
       </div>
     </Router>
   );

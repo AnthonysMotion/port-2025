@@ -8,6 +8,85 @@ export const animateText = () => {
 
   const animationDuration = 2;
 
+  const spansPromo = document.querySelectorAll('.promo-letter');
+
+  spansPromo.forEach(span => {
+    gsap.fromTo(span,
+      { 
+        opacity: 0, 
+        x: -90,
+        skewX: -20,
+      },
+      {
+        opacity: 1,
+        x: 0,
+        skewX: 0,
+        duration: 0.5,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: span,
+          start: "top 100%",
+          end: "bottom 10%",
+          toggleActions: "play none none reverse",
+          scrub: true
+        }
+      }
+    );
+  });
+
+  const psoImages = document.querySelectorAll('.pso-img img');
+
+  psoImages.forEach((img) => {
+    gsap.fromTo(img,
+      { 
+        opacity: 0, 
+        x: -120,
+        rotateY: 50,
+      },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 0.3,
+        rotateY: 0,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: img,
+          start: "top 100%",
+          end: "bottom 10%",
+          toggleActions: "play none none reverse",
+          scrub: true,
+        }
+      }
+    );
+  });
+
+/*
+  const workItems = document.querySelectorAll('.work-item');
+
+  workItems.forEach(item => {
+    gsap.fromTo(item,
+      { 
+        opacity: 0, 
+        y: 50,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.3,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: item,
+          start: "top 90%",
+          end: "bottom 10%",
+          toggleActions: "play none none reverse",
+          scrub: true
+        }
+      }
+    );
+  });
+   */
+  
+
   gsap.fromTo(".hero h1 .letter, .hero h1 span",
     {
       y: 50,
@@ -41,13 +120,13 @@ export const animateText = () => {
   gsap.fromTo(".parallax-header-bg",
     {
       opacity: 0,
-      scale: 2
+      scale: 2.5
     },
     {
       opacity: 1,
-      duration: 2,
+      duration: 5,
       delay: 2,
-      scale: 1,
+      scale: 1.1,
       ease: "power3.out"
     }
   )

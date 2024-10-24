@@ -9,7 +9,9 @@ const About = () => {
     
     return (
         <div className='container'>
-            <h1>about</h1>
+            <div className='about-landing'>
+                <h1>sup g im the goat</h1>
+            </div>
         </div>
     );
 };

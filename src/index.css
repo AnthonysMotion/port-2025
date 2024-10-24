@@ -1,5 +1,10 @@
 /* universal */
 
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
 * {
   cursor: none;
 }
@@ -21,15 +26,9 @@ body {
   font-size: 1.25rem;
   font-weight: 700;
   text-transform: uppercase;
-  min-height: 300vh;
 }
 
 /* temp style */
-
-footer {
-  position: relative;
-  top: 2000px;
-}
 
 .custom-cursor {
   width: 16px;
@@ -89,12 +88,14 @@ footer {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 120vh;
-  object-fit: cover;
-  z-index: 1;
-  transform: translate3d(0, 0, 0);
+  width: auto;
+  height: 110%;
+  min-width: 100%;
+  z-index: -1;
+  border: none;
+  overflow: hidden;
 }
+
 
 .accents {
   position: absolute;
@@ -113,7 +114,6 @@ footer {
 .accent-2,
 .accent-3 {
   display: flex;
-  flex-direction: column;
 }
 
 .accent-3>ul {
@@ -145,6 +145,7 @@ footer {
 .hero h1 span {
   display: inline-block;
   will-change: transform, opacity;
+  filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.2));
 }
 
 .mobile-portfolio-grid {
@@ -260,6 +261,7 @@ footer {
 .mobile-portfolio-item {
   position: relative;
   overflow: hidden;
+  overflow: hidden;
 }
 
 .mobile-portfolio-item img {
@@ -267,6 +269,7 @@ footer {
   height: auto;
   display: block;
   transition: .3s ease;
+  overflow: hidden;
   overflow: hidden;
 }
 
@@ -278,6 +281,7 @@ footer {
   padding: 40px 40px;
   margin: 0;
   text-align: center;
+  overflow: hidden;
 }
 
 .mobile-portfolio-item {
@@ -294,6 +298,7 @@ footer {
 
 .mobile-portfolio-item img {
   transition: transform 0.3s ease, opacity 0.3s ease;
+  overflow: hidden;
 }
 
 .mobile-portfolio-item:hover img {
@@ -400,6 +405,137 @@ footer {
 
 .mobile-portfolio-grid {
   display: none;
+  overflow: hidden;
+}
+
+.contact-section {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.contact-section h3 {
+  max-width: 40%;
+}
+
+.contact-section span {
+  font-family: "Redaction";
+  text-transform: none;
+  font-size: 32px;
+  color: #dcf263;
+}
+
+.promo-section-one {
+  padding: 2rem;
+}
+
+.promo-section-one h1 {
+  max-width: 70%;
+  font-size: 4.5rem;
+  position: relative;
+  line-height: 150%;
+}
+
+.promo-letter {
+  display: inline-block; 
+  will-change: transform, opacity;
+}
+
+.color {
+  color: #dcf263;
+}
+
+
+/* animations */
+
+@keyframes workFontChange {
+  0% {
+    font-family: "Rubik", sans-serif;
+  }
+  20% {
+    font-family: "Rubik", sans-serif;
+    font-style: italic;
+  }
+  30% {
+    font-family: 'Redaction', sans-serif;
+  }
+}
+
+@keyframes workFontRevert {
+  0% {
+    font-family: "Redaction", sans-serif;
+    color: #dcf263;
+  }
+  5% {
+    font-family: "Rubik", sans-serif;
+    font-style: italic;
+    color: #dcf263;
+  }
+  10% {
+    font-family: 'Rubik', sans-serif;
+  }
+}
+
+footer {
+  padding: 2rem;
+  border-top: solid 1px white;
+}
+
+.footer img {
+  max-width: 10%;
+  height: auto;
+}
+
+.promo-section-one {
+  padding: 2rem;
+  display: flex; 
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+  align-items: center;
+}
+
+.pso-img {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+  position: relative;
+  top: 0;
+  left: -3rem;
+  perspective: 1000px;
+}
+
+.pso-img img {
+  max-width: 19rem;
+  height: auto;
+}
+
+.pso-img-1 {
+  position: relative;
+  left: -150px;
+  top: 50px;
+  transform: rotate(5deg);
+  z-index: -1;
+}
+
+.pso-img-2 {
+  transform: rotate(-5deg);
+  z-index: -2;
+}
+
+.promo-section-one h1 {
+  z-index: 1;
+}
+
+@media only screen and (max-width: 1500px) {
+  .parallax-header-bg {
+    height: 120%;
+    width: 150%;
+    overflow: hidden;
+  }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -413,14 +549,60 @@ footer {
 
   .mobile-portfolio-grid {
     display: grid;
+    max-width: 100%;
   }
 
   .works-section {
     display: none;
   }
+
+  .parallax-header-bg {
+    top: -200px;
+    left: -450px;
+    height: 160%;
+    width: 230%;
+    overflow: hidden;
+  }
+
+  .promo-section-one h1 span {
+    font-size: 45px;
+  }
+
+  .promo-section-one h1 {
+    line-height: 90%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .parallax-header-bg {
+    top: -200px;
+    left: -500px;
+    height: 140%;
+    width: 260%;
+    overflow: hidden;
+  }
+
+  .promo-section-one h1 span {
+    font-size: 35px;
+  }
+
+  .promo-section-one h1 {
+    line-height: 60%;
+    max-width: 100%;
+  }
+
+  .pso-img {
+    position: absolute;
+    display: hidden;
+    opacity: 0;
+  }
 }
 
 @media only screen and (max-width: 600px) {
+  .custom-cursor {
+    display: none;
+  }
+
   .accents {
     display: none;
   }
@@ -456,35 +638,56 @@ footer {
   .mobile-portfolio-grid {
     display: block;
   }
+
+  .parallax-header-bg {
+    left: -600px;
+    height: 140%;
+    width: 400%;
+    overflow: hidden;
+  }
+
+  .promo-section-one h1 span {
+    font-size: 45px;
+  }
+
+  .promo-section-one {
+    width: 80%;
+  }
+
+  .promo-section-one h1 {
+    line-height: 45%;
+    max-width: 100%;
+  }
+
+  .pso-img {
+    display: hidden;
+    opacity: 0;
+  }
+}
+
+/* styles for about.js */
+
+.about-landing {
+  width: 100%;
+  height: 100%;
+  align-content: center;
 }
 
 
-/* animations */
-
-@keyframes workFontChange {
-  0% {
-    font-family: "Rubik", sans-serif;
-  }
-  20% {
-    font-family: "Rubik", sans-serif;
-    font-style: italic;
-  }
-  30% {
-    font-family: 'Redaction', sans-serif;
-  }
+.fade-enter {
+  opacity: 0;
 }
 
-@keyframes workFontRevert {
-  0% {
-    font-family: "Redaction", sans-serif;
-    color: #dcf263;
-  }
-  5% {
-    font-family: "Rubik", sans-serif;
-    font-style: italic;
-    color: #dcf263;
-  }
-  10% {
-    font-family: 'Rubik', sans-serif;
-  }
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
 }
