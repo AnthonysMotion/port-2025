@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Nav from './components/Nav';
@@ -15,7 +15,7 @@ import Six from './pages/Six';
 
 import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
-import SmoothScroll from './components/smoothscroll';
+//import SmoothScroll from './components/smoothscroll';
 import CustomCursor from './components/cursor';
 
 gsap.registerPlugin(TextPlugin);
@@ -26,7 +26,7 @@ function App() {
       <div id="root">
         <Nav />
         <CustomCursor />
-        <SmoothScroll />
+
 
         <main className="main-content"> {/* This div will allow the content to grow and push the footer down */}
           <Routes>
