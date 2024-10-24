@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
 import Nav from './components/Nav';
