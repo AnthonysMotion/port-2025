@@ -194,13 +194,13 @@ const Home = () => {
           </div>
         </div>
         <iframe
-  className='parallax-header-bg'
-  title='header_bg'
-  src="https://www.youtube.com/embed/lBQgF1R_5Yg?controls=0&autoplay=1&mute=1&modestbranding=1&showinfo=0&fs=0&rel=0&loop=1&playlist=lBQgF1R_5Yg"
-  frameBorder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowFullScreen
-></iframe>
+          className='parallax-header-bg'
+          title='header_bg'
+          src="https://www.youtube.com/embed/5c8tMyRE_ik?controls=0&autoplay=1&mute=1&modestbranding=1&showinfo=0&fs=0&rel=0&loop=1"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
 
 
       </div>

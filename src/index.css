@@ -87,14 +87,16 @@ body {
 .parallax-header-bg {
   position: absolute;
   top: 0;
-  bottom: 0;
-  right: 0;
   left: 0;
-  width: 100vw;
+  width: auto;
+  height: 110%;
+  min-width: 100%;
   z-index: -1;
-  transform: translate3d(0, 0, 0);
-  filter: blur(6px);
+  /*filter: blur(6px) brightness(0.3);*/
+  border: none;
+  overflow: hidden;
 }
+
 
 .accents {
   position: absolute;
@@ -407,18 +409,6 @@ body {
   overflow: hidden;
 }
 
-.parallax-header-bg {
-  position: "absolute";
-  top: 0;
-  left: 0;
-  width: "auto";
-  height: "100%";
-  min-Width: "100%";
-  z-Index: -1;
-  border: "none";
-  overflow: "hidden";
-}
-
 @media only screen and (max-width: 1500px) {
   .parallax-header-bg {
     height: 120%;
@@ -447,9 +437,9 @@ body {
 
   .parallax-header-bg {
     top: -200px;
-    left: -190px;
+    left: -450px;
     height: 160%;
-    width: 210%;
+    width: 230%;
     overflow: hidden;
   }
 }
