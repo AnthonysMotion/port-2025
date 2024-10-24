@@ -26,9 +26,35 @@ export const animateText = () => {
         scrollTrigger: {
           trigger: span,
           start: "top 100%",
-          end: "bottom 40%",
+          end: "bottom 10%",
           toggleActions: "play none none reverse",
           scrub: true
+        }
+      }
+    );
+  });
+
+  const psoImages = document.querySelectorAll('.pso-img img');
+
+  psoImages.forEach((img) => {
+    gsap.fromTo(img,
+      { 
+        opacity: 0, 
+        x: -120,
+        rotateY: 50,
+      },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 0.3,
+        rotateY: 0,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: img,
+          start: "top 100%",
+          end: "bottom 10%",
+          toggleActions: "play none none reverse",
+          scrub: true,
         }
       }
     );

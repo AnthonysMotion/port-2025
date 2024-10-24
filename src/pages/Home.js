@@ -15,10 +15,10 @@ const Home = () => {
   ];
 
   const images = [
-    { url: '/img/lenovo.png', link: 'https://www.lenovo.com/', alt: 'Lenovo' },
-    { url: '/img/microsoft.png', link: 'https://www.microsoft.com', alt: 'Microsoft' },
-    { url: '/img/vodafone.png', link: 'https://one.nz/', alt: 'Vodafone' },
-    { url: '/img/esl.png', link: 'https://eslfaceitgroup.com/', alt: 'ESL' }
+    { url: `${process.env.PUBLIC_URL}/img/lenovo.png`, link: 'https://www.lenovo.com/', alt: 'Lenovo' },
+    { url: `${process.env.PUBLIC_URL}/img/microsoft.png`, link: 'https://www.microsoft.com', alt: 'Microsoft' },
+    { url: `${process.env.PUBLIC_URL}/img/vodafone.png`, link: 'https://one.nz/', alt: 'Vodafone' },
+    { url: `${process.env.PUBLIC_URL}/img/esl.png`, link: 'https://eslfaceitgroup.com/', alt: 'ESL' }
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -81,7 +81,7 @@ const Home = () => {
       const scrollPosition = window.scrollY;
       const windowHeight = window.innerHeight;
 
-      const fadeOpacity = 1 - (scrollPosition / windowHeight) * 3;
+      const fadeOpacity = 1 - (scrollPosition / windowHeight) * 1;
       const newOpacity = Math.max(0, Math.min(1, fadeOpacity));
 
       //const minFontSize = 2;
@@ -275,8 +275,12 @@ const Home = () => {
       <div className='promo-section-one'>
         <h1>
           {/*           <span className="promo-letter">I'm</span> <span className="promo-letter">a</span> <span className="promo-letter color">digital</span> <span className="promo-letter color">designer</span> <span className="promo-letter">who </span> <span className="promo-letter">offers</span> <span className="promo-letter">integrated</span> <span className="promo-letter">design</span> <span className="promo-letter">solutions</span> <span className="promo-letter">that</span> <span className="promo-letter">explore</span> <span className="promo-letter">the</span> <span className="promo-letter">digital-branding </span> <span className="promo-letter">nexus.</span><br /><br /> <span className="promo-letter">I</span> <span className="promo-letter">extract</span> <span className="promo-letter">beauty</span> <span className="promo-letter">from </span> <span className="promo-letter">purpose</span> <span className="promo-letter">to</span> <span className="promo-letter">get</span> <span className="promo-letter">your</span> <span className="promo-letter">brand </span> <span className="promo-letter color">higher</span><span className="promo-letter">,</span> <span className="promo-letter">your</span> <span className="promo-letter">vision</span> <span className="promo-letter color">farther</span><span className="promo-letter">,</span> <span className="promo-letter">and</span> <span className="promo-letter">your</span> <span className="promo-letter">impact</span> <span className="promo-letter color">harder</span><span className="promo-letter">.</span> */}
-          <span className="promo-letter">I</span> <span className="promo-letter">extract</span> <span className="promo-letter">beauty</span> <span className="promo-letter">from </span> <span className="promo-letter">purpose</span> <span className="promo-letter">to</span> <span className="promo-letter">get</span> <span className="promo-letter">your</span> <span className="promo-letter">brand </span> <span className="promo-letter color">higher</span><span className="promo-letter">,</span> <span className="promo-letter">your</span> <span className="promo-letter">vision</span> <span className="promo-letter color">farther</span><span className="promo-letter">,</span> <span className="promo-letter">and</span> <span className="promo-letter">your</span> <span className="promo-letter">impact</span> <span className="promo-letter color">harder</span><span className="promo-letter">.</span>
+          <span className="promo-letter">I</span> <span className="promo-letter">extract</span> <span className="promo-letter">beauty</span> <span className="promo-letter">from </span> <span className="promo-letter">purpose</span> <span className="promo-letter">to</span> <span className="promo-letter">get</span> <span className="promo-letter">your</span> <span className="promo-letter">brand </span> <span className="promo-letter color">higher</span><span className="promo-letter">,</span> <span className="promo-letter">your</span> <span className="promo-letter">vision</span> <span className="promo-letter color">farther</span><span className="promo-letter">,</span><span className="promo-letter">and</span> <span className="promo-letter">your</span> <span className="promo-letter">impact</span> <span className="promo-letter color">harder</span><span className="promo-letter">.</span>
         </h1>
+        <div className='pso-img'>
+          <img src={`${process.env.PUBLIC_URL}/img/img-1.png`} className='pso-img-1'></img>
+          <img src={`${process.env.PUBLIC_URL}/img/img-2.png`} className='pso-img-2'></img>
+        </div>
       </div>
 
 
