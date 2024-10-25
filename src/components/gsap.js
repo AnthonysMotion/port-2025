@@ -6,6 +6,8 @@ gsap.registerPlugin(ScrollTrigger);
 export const animateText = () => {
   document.body.style.overflow = 'hidden';
 
+  gsap.registerPlugin(ScrollTrigger);
+
   const animationDuration = 2;
 
   const spansPromo = document.querySelectorAll('.promo-letter');
