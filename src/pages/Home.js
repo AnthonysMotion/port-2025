@@ -84,10 +84,7 @@ const Home = () => {
       const fadeOpacity = 1 - (scrollPosition / windowHeight) * 1;
       const newOpacity = Math.max(0, Math.min(1, fadeOpacity));
 
-      //const minFontSize = 2;
-      //const maxFontSize = 3;
       const scrollFraction = scrollPosition / windowHeight;
-      //const newFontSize = `${Math.max(minFontSize, Math.min(maxFontSize, minFontSize + (maxFontSize - minFontSize) * scrollFraction))}rem`;
 
       const maxBlur = 10;
       const newBlur = `${Math.min(maxBlur, maxBlur * scrollFraction)}px`;
@@ -96,7 +93,6 @@ const Home = () => {
 
       if (hero) {
         hero.style.opacity = newOpacity;
-        //hero.style.fontSize = newFontSize;
         hero.style.filter = `blur(${newBlur})`;
       }
     };
@@ -124,8 +120,6 @@ const Home = () => {
   const handleMouseLeave = () => {
     setHoveredItem(null);
   };
-
-
 
   return (
     <div className='container'>
@@ -283,8 +277,38 @@ const Home = () => {
         </div>
       </div>
 
-
-
+      <div className='figures-section'>
+        <h1>FIGURES</h1>
+        <div className='figures-container'>
+          <div className='figures1'>
+            <p>Scope:</p>
+            <ul>
+              <li>Motion & Graphic Design</li>
+              <li>Photography</li>
+              <li>Web Design & Development</li>
+              <li>Video Editing</li>
+              <li>Brand & Art Direction</li>
+            </ul>
+          </div>
+          <div className='figures2'>
+            <p>Awards:</p>
+            <ul>
+              <li>Best Design Award - Motion Design</li>
+              <li>Behance Featured 1x</li>
+            </ul>
+          </div>
+          <div className='figures3'>
+            <p>Past Clients:</p>
+            <ul>
+              <li>Lenovo</li>
+              <li>One NZ Warriors</li>
+              <li>Microsoft Windows 11</li>
+              <li>Nova Esports</li>
+              <li>Sony Xperia</li>
+            </ul>
+          </div>
+        </div>
+      </div>
       <Footer />
     </div>
   );

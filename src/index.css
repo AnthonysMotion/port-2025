@@ -530,6 +530,123 @@ footer {
   z-index: 1;
 }
 
+/* styles for about.js */
+
+.about-landing {
+  width: 100%;
+  height: 100%;
+  align-content: center;
+}
+
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+
+.scope-slide-container {
+  display: flex;
+  white-space: nowrap;
+}
+
+.figures-section {
+  padding: 2rem;
+}
+
+.figures-section p {
+  color: #dcf263;
+}
+
+.figures-section {
+  text-align: left;
+}
+
+.figures-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.figures1, .figures2, .figures3 {
+  flex: 1;
+  min-width: 200px;
+}
+
+.about-landing {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+.about-landing h1 {
+  font-size: 4vw;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.about-landing p {
+  margin: 25px;
+}
+
+.about-landing img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.7;
+}
+
+.about-main-section {
+  height: 100vh;
+  padding: 2rem;
+}
+
+.font {
+  font-family: "Redaction";
+  text-transform: none;
+}
+
+.about-main-section {
+  text-transform: none;
+}
+
+
+.form-container {
+  height: 100vh;
+  padding: 2rem;
+}
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 1500px) {
   .parallax-header-bg {
     height: 120%;
@@ -595,6 +712,22 @@ footer {
     position: absolute;
     display: hidden;
     opacity: 0;
+  }
+
+  .figures-container {
+    display: block;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .figures1, .figures2, .figures3 {
+    display: block;
+  }
+
+  footer {
+    padding: 2rem;
+    border-top: solid 1px white;
+    font-size: 50%;
   }
 }
 
@@ -663,31 +796,4 @@ footer {
     display: hidden;
     opacity: 0;
   }
-}
-
-/* styles for about.js */
-
-.about-landing {
-  width: 100%;
-  height: 100%;
-  align-content: center;
-}
-
-
-.fade-enter {
-  opacity: 0;
-}
-
-.fade-enter-active {
-  opacity: 1;
-  transition: opacity 500ms ease-in-out;
-}
-
-.fade-exit {
-  opacity: 1;
-}
-
-.fade-exit-active {
-  opacity: 0;
-  transition: opacity 500ms ease-in-out;
 }
