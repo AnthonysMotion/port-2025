@@ -125,8 +125,6 @@ const Home = () => {
     setHoveredItem(null);
   };
 
-
-
   return (
     <div className='container'>
       <div className='parallax-header'>
