@@ -40,4 +40,5 @@ However, I have deployed the project over at Github Pages for your viewing, whic
 - HTML
 - CSS
 - GSAP
+- EmailJS
 - VsCode
