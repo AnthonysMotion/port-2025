@@ -83,13 +83,13 @@
   gap: 15px;
 }
 
-.social-icons a i:hover, .fullscreen-menu .menu-social-icons i:hover, .menu-icon i:hover {
+.social-icons a i:hover, .fullscreen-menu .menu-social-icons i:hover, .menu-icon i:hover, .contact-social-icons a i:hover {
   animation: siHover .2s forwards;
   transition: none;
   filter: blur(0.8px);
 }
 
-.social-icons a i:not(:hover), .fullscreen-menu .menu-social-icons i:not(:hover), .menu-icon i:not(:hover) {
+.social-icons a i:not(:hover), .fullscreen-menu .menu-social-icons i:not(:hover), .menu-icon i:not(:hover), .contact-social-icons a i:not(:hover) {
   animation: siRevert .2s forwards;
   transition: none;
 }
