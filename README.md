@@ -30,9 +30,7 @@ This project is not yet completed; therefore, my current portfolio website is ac
 However, I have deployed the project over at Github Pages for your viewing, which I have linked below - as well as my current portfolio website.
 
 - [Github Pages Deployment](https://anthonysmotion.github.io/port-2025/)
-- - Last Updated: 24/10/2024
 - [Portfolio Website](https://anthonythach.com/)
-- - Last Updated: May 2024
 
 ## Built with
 
