@@ -60,33 +60,6 @@ export const animateText = () => {
     );
   });
 
-/*
-  const workItems = document.querySelectorAll('.work-item');
-
-  workItems.forEach(item => {
-    gsap.fromTo(item,
-      { 
-        opacity: 0, 
-        y: 50,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.3,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: item,
-          start: "top 90%",
-          end: "bottom 10%",
-          toggleActions: "play none none reverse",
-          scrub: true
-        }
-      }
-    );
-  });
-   */
-  
-
   gsap.fromTo(".hero h1 .letter, .hero h1 span",
     {
       y: 50,
