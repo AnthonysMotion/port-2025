@@ -43,8 +43,9 @@ const About = () => {
       <div className="about-container">
         <div className="about-landing">
           <h1>Hello! 初めまして！</h1>
-          <p>My name is Anthony — a digital designer & photographer based in Auckland, New Zealand.<br />I've been creating animations, designs, photographs, and videos for over 6 years. </p>
-          <p>I think of myself as a full-stack creative.</p>
+          <p>My name is Anthony — a digital designer & photographer based in Auckland, New Zealand.<br />I've been creating animations, designs, photographs, and videos for over 6 years.</p>
+          <p><br />I think of myself as a full-stack creative, and despite being multidisciplinary, you'll find that my work touches base motion and graphic design, focusing on creating unique visual experiences for advertising and marketing purposes.</p>
+          <p><br />If you have a project in mind, <Link to="/contact">reach out!</Link> Let's create something extraordinary.</p>
         </div>
         <div className="about-img">
           <img src={`${process.env.PUBLIC_URL}/img/img-2.png`} alt="Your image description here" />

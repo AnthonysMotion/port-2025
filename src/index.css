@@ -576,18 +576,42 @@ footer {
   max-width: 50%;
 }
 
+.about-landing h1 {
+  color: var(--background-color);
+  background-color: var(--accent-color);
+  display: inline-block;
+}
+
+.about-landing h1::selection {
+  background-color: var(--white-color);
+}
+
+.about-landing p {
+  line-height: 1.5;
+}
+
+.about-landing a {
+  color: var(--accent-color);
+}
+
+.about-landing a:hover {
+  text-decoration: underline;
+}
+
 .about-img {
   flex: 1;
   max-width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
 }
 
 .about-img img {
-  height: 70vh;
-  width: auto;
-  
+  width: 100%;
+  height: auto;
+  max-height: 90vh;
+  object-fit: cover;
 }
 
 /* /contact form */
@@ -603,6 +627,7 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-transform: none;
 }
 
 .form-header h1 {
