@@ -189,7 +189,8 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <iframe
+        {/*
+                <iframe
           className='parallax-header-bg'
           title='header_bg'
           src="https://www.youtube.com/embed/5c8tMyRE_ik?controls=0&autoplay=1&mute=1&modestbranding=1&showinfo=0&fs=0&rel=0&start=3&loop=1&playlist=5c8tMyRE_ik"
@@ -197,6 +198,19 @@ const Home = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         ></iframe>
+        */}
+        <video
+          className="parallax-header-bg"
+          src={`${process.env.PUBLIC_URL}/img/landing-bg.mp4`}
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+        </video>
+
+
+
 
 
 

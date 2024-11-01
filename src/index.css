@@ -88,13 +88,14 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: auto;
-  height: 110%;
-  min-width: 100%;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
   z-index: -1;
   border: none;
   overflow: hidden;
 }
+
 
 
 .accents {
@@ -746,11 +747,6 @@ button:hover {
 
 
 @media only screen and (max-width: 1500px) {
-  .parallax-header-bg {
-    height: 120%;
-    width: 150%;
-    overflow: hidden;
-  }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -771,14 +767,6 @@ button:hover {
     display: none;
   }
 
-  .parallax-header-bg {
-    top: -200px;
-    left: -450px;
-    height: 160%;
-    width: 230%;
-    overflow: hidden;
-  }
-
   .promo-section-one h1 span {
     font-size: 45px;
   }
@@ -789,14 +777,6 @@ button:hover {
 }
 
 @media only screen and (max-width: 800px) {
-  .parallax-header-bg {
-    top: -200px;
-    left: -500px;
-    height: 140%;
-    width: 260%;
-    overflow: hidden;
-  }
-
   .promo-section-one h1 span {
     font-size: 35px;
   }
@@ -879,13 +859,6 @@ button:hover {
 
   .mobile-portfolio-grid {
     display: block;
-  }
-
-  .parallax-header-bg {
-    left: -600px;
-    height: 140%;
-    width: 400%;
-    overflow: hidden;
   }
 
   .promo-section-one h1 span {
