@@ -273,39 +273,6 @@ const Home = () => {
           <img src={`${process.env.PUBLIC_URL}/img/img-2.png`} className='pso-img-2'></img>
         </div>
       </div>
-
-      <div className='figures-section'>
-        <h1>FIGURES</h1>
-        <div className='figures-container'>
-          <div className='figures1'>
-            <p>Scope:</p>
-            <ul>
-              <li>Motion & Graphic Design</li>
-              <li>Photography</li>
-              <li>Web Design & Development</li>
-              <li>Video Editing</li>
-              <li>Brand & Art Direction</li>
-            </ul>
-          </div>
-          <div className='figures2'>
-            <p>Awards:</p>
-            <ul>
-              <li>Best Design Award - Motion Design</li>
-              <li>Behance Featured 1x</li>
-            </ul>
-          </div>
-          <div className='figures3'>
-            <p>Past Clients:</p>
-            <ul>
-              <li>Lenovo</li>
-              <li>One NZ Warriors</li>
-              <li>Microsoft Windows 11</li>
-              <li>Nova Esports</li>
-              <li>Sony Xperia</li>
-            </ul>
-          </div>
-        </div>
-      </div>
       <Footer />
     </div>
   );
