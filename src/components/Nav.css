@@ -17,7 +17,7 @@
   left: 0;
   right: 0;
   background-color: transparent;
-  color: black;
+  color: var(--background-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -64,7 +64,7 @@
 
 .links a,
 .social-icons a i {
-  color: white;
+  color: var(--white-color);
   text-decoration: none;
   font-size: 20px;
   transition: none;
@@ -73,7 +73,7 @@
 
 .links a:hover, .fullscreen-menu .menu-links a:hover {
   font-family: 'Redaction';
-  color: #dcf263;
+  color: var(--accent-color);
   filter: blur(0.7px);
   transition: .3s ease;
 }
@@ -102,7 +102,7 @@
 */
 
 .nav-divider {
-  color: #dcf263;
+  color: var(--accent-color);
 }
 
 .links a {
@@ -134,12 +134,12 @@
 @keyframes fontRevert {
   0% {
     font-family: "Redaction", sans-serif;
-    color: #dcf263;
+    color: var(--accent-color);
   }
   5% {
     font-family: "Rubik", sans-serif;
     font-style: italic;
-    color: #dcf263;
+    color: var(--accent-color);
     transform: scale(1.05);
   }
   10% {
@@ -149,10 +149,10 @@
 
 @keyframes siHover {
   0% {
-    color: white;
+    color: var(--white-color);
   }
   50% {
-    color: #dcf263;
+    color: var(--accent-color);
     transform: scale(1.2);
     font-weight: bolder;
   }
@@ -165,12 +165,12 @@
 
 @keyframes siRevert {
   0% {
-    color: #dcf263;
+    color: var(--accent-color);
     transform: scale(1.1);
     font-style: italic;
   }
   50% {
-    color: #dcf263;
+    color: var(--accent-color);
     transform: scale(1.2);
     font-weight: bolder;
   }
