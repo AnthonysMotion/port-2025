@@ -27,10 +27,8 @@ const About = () => {
     };
   }, []);
 
-  return (
-    <div className='container'>
-      <div className='about-landing'>
-        <p>Hello!👋 I am a</p>
+  /*
+          <p>Hello!👋 I am a</p>
         <h1>
           <span className='font'>(</span>
           <span className='font color'> Digital Designer </span>
@@ -38,13 +36,20 @@ const About = () => {
           <code>&lt;<span className='color'>DEVELOPER</span>/&gt;</code>
         </h1>
         <p>Based in Auckland, New Zealand.</p>
-      </div>
+  */
 
-      <div className='about-main-section'>
-        <h1>THE PATHFINDER</h1>
-        <p>aye the beat go off?</p>
+  return (
+    <div className='container'>
+      <div className="about-container">
+        <div className="about-landing">
+          <h1>Hello! 初めまして！</h1>
+          <p>My name is Anthony — a digital designer & photographer based in Auckland, New Zealand.<br />I've been creating animations, designs, photographs, and videos for over 6 years. </p>
+          <p>I think of myself as a full-stack creative.</p>
+        </div>
+        <div className="about-img">
+          <img src={`${process.env.PUBLIC_URL}/img/img-2.png`} alt="Your image description here" />
+        </div>
       </div>
-
       <div className='figures-section'>
         <h1>FIGURES</h1>
         <div className='figures-container'>
