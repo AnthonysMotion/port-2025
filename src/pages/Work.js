@@ -8,7 +8,7 @@ const About = () => {
   }, []);
 
   const projects = [
-    { id: 6, title: 'Photography Portfolio', type: 'Photography', brand: 'Miscellaneous', hoverImageUrl: `${process.env.PUBLIC_URL}/img/5.gif`, link: '/photography' },
+    { id: 6, title: 'Photography Portfolio', type: 'Photography', brand: 'Miscellaneous', hoverImageUrl: `${process.env.PUBLIC_URL}/img/6.png`, link: '/photography' },
     { id: 0, title: 'Lenovo Hero Stories', type: 'Social Media', brand: 'Lenovo', hoverImageUrl: `${process.env.PUBLIC_URL}/img/0.gif`, link: '/lenovo' },
     { id: 1, title: 'Nova Esports', type: 'Brand Direction', brand: 'Nova Esports', hoverImageUrl: `${process.env.PUBLIC_URL}/img/1.gif`, link: '/nova-esports' },
     { id: 2, title: 'One NZ Warriors', type: 'Brand Direction', brand: 'NZ Warriors', hoverImageUrl: `${process.env.PUBLIC_URL}/img/2.png`, link: '/nz-warriors' },
