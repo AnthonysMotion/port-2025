@@ -1,11 +1,24 @@
-// src/components/Footer.js
 import React from 'react';
 
 const Footer = () => {
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <div className='footer'>
       <footer>
+        <button onClick={scrollToTop} className="scroll-up-button" style={{
+          width: "50px",
+          height: "50px"
+        }}>
+          <i class="fas fa-chevron-up"></i>
+
+        </button>
         <h2>
           Get in touch — <a href="mailto:hello@anthonythach.com" className='color email-hover'>hello@anthonythach.com</a>
         </h2>
