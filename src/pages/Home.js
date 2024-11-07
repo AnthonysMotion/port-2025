@@ -120,6 +120,10 @@ const Home = () => {
     setHoveredItem(null);
   };
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className='container'>
       <div className='parallax-header'>
