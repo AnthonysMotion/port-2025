@@ -7,7 +7,7 @@ const One = () => {
 
   return (
     <div className='container'>
-        <h1>one</h1>
+        <h1>nova</h1>
     </div>
   );
 };

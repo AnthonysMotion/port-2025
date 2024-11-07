@@ -1,0 +1,11 @@
+footer {
+    margin-top: auto;
+    height: 100%;
+    padding: 2rem;
+    border-top: solid 1px var(--white-color);
+}
+
+.footer img {
+    max-width: 10%;
+    height: auto;
+}

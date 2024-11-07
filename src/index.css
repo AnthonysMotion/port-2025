@@ -17,6 +17,12 @@ html, body {
   cursor: none;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 html {
   background-color: var(--background-color);
   color: var(--white-color);
@@ -36,9 +42,15 @@ body {
   text-transform: uppercase;
 }
 
-.container {
-  position: relative;
-  height: 100vh;
+.uncap {
+  text-transform: none;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .hidden {
@@ -488,19 +500,6 @@ body {
   color: var(--accent-color);
 }
 
-
-/* footer */
-
-footer {
-  padding: 2rem;
-  border-top: solid 1px var(--white-color);
-}
-
-.footer img {
-  max-width: 10%;
-  height: auto;
-}
-
 .promo-section-one {
   padding: 2rem;
   display: flex; 
@@ -763,28 +762,36 @@ button:hover {
 
 /* photography */
 
-.photo-grid {
+
+/* lenovo */
+
+.lenovo-section-one {
   padding: 2rem;
   padding-top: 4rem;
+  height: 150vh;
+  flex: 1;
 }
 
-.photo-grid-row {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
+.lenovo-media-section {
+  padding: 2rem;
 }
 
-.photo-grid-column {
-  flex: 15%;
-  padding: 0 4px;
-}
-
-.photo-grid-column img {
-  margin-top: 8px;
+.iframe-container {
+  position: relative;
+  overflow: hidden;
   width: 100%;
-  vertical-align: middle;
+  padding-top: 56.25%;
 }
 
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 75%;
+  height: 75%;
+}
 
 /* responsive */
 
@@ -844,12 +851,6 @@ button:hover {
     display: block;
   }
 
-  footer {
-    padding: 2rem;
-    border-top: solid 1px var(--white-color);
-    font-size: 50%;
-  }
-
   .form-wrapper {
     flex-direction: column;
     height: auto;
@@ -858,7 +859,7 @@ button:hover {
   .form-header,
   .form-container {
     flex: none;
-    width: 100vw;
+    width: 90vw;
   }
 }
 

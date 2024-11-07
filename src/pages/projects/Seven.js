@@ -47,7 +47,6 @@ const Seven = () => {
     columns[index % numColumns].push(image);
   });
   return (
-
     <div className='container'>
       <div className='photo-grid'>
         <div className="photo-grid-row">
@@ -59,7 +58,7 @@ const Seven = () => {
             </div>
           ))}
         </div>
-        <h2 style={{"padding-top": "2rem"}}>These images were shot on:</h2>
+        <h2 style={{ "padding-top": "2rem" }}>These images were shot on:</h2>
         <ul>
           <li>Canon EOS R10</li>
           <li>Canon EOS 60D</li>
@@ -71,6 +70,31 @@ const Seven = () => {
         </ul>
       </div>
       <Footer />
+      <style>
+        {`
+          .photo-grid {
+            padding: 2rem;
+            padding-top: 4rem;
+          }
+
+          .photo-grid-row {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 4px;
+          }
+
+          .photo-grid-column {
+            flex: 15%;
+            padding: 0 4px;
+          }
+
+          .photo-grid-column img {
+            margin-top: 8px;
+            width: 100%;
+            vertical-align: middle;
+          }
+        `}
+      </style>
     </div>
   );
 };
