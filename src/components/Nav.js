@@ -38,6 +38,8 @@ const Nav = () => {
           <img src={logoSrc} alt="Logo" />
         </Link>
         <div className="links">
+          <Link to="/work">Work</Link>
+          <span className="nav-divider">/</span>
           <Link to="/about">About</Link>
           <span className="nav-divider">/</span>
           <Link to="/contact">Contact</Link>
@@ -50,6 +52,7 @@ const Nav = () => {
         <div className={`fullscreen-menu ${isMenuOpen ? 'open' : ''}`}>
           <div className="menu-links">
             <Link to="/" onClick={toggleMenu}>Home</Link>
+            <Link to="/work" onClick={toggleMenu}>Work</Link>
             <Link to="/about" onClick={toggleMenu}>About</Link>
             <Link to="/contact" onClick={toggleMenu}>Contact</Link>
           </div>

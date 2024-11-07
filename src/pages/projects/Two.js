@@ -1,6 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
-import { Link } from 'react-router-dom';
-import { animateText } from '../components/gsap';
+import React, { useEffect } from 'react';
 
 const One = () => {
     useEffect(() => {

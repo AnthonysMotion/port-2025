@@ -1,6 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
-import { Link } from 'react-router-dom';
-import { animateText } from '../components/gsap';
+import React, { useEffect } from 'react';
 
 const Four = () => {
     useEffect(() => {
@@ -9,7 +7,7 @@ const Four = () => {
 
   return (
     <div className='container'>
-        <h1>four</h1>
+        <h1>4</h1>
     </div>
   );
 };
