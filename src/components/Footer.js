@@ -16,8 +16,7 @@ const Footer = () => {
           width: "50px",
           height: "50px"
         }}>
-          <i class="fas fa-chevron-up"></i>
-
+          <i class="fas fa-arrow-up"></i>
         </button>
         <h2>
           Get in touch — <a href="mailto:hello@anthonythach.com" className='color email-hover'>hello@anthonythach.com</a>

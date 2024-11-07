@@ -59,6 +59,16 @@ const Seven = () => {
             </div>
           ))}
         </div>
+        <h2 style={{"padding-top": "2rem"}}>These images were shot on:</h2>
+        <ul>
+          <li>Canon EOS R10</li>
+          <li>Canon EOS 60D</li>
+          <li>Kodak Ektar H35</li>
+          <br />
+          <li>Sigma 50mm f1.4</li>
+          <li>Canon 18-135mm f3.5 - 5.6</li>
+          <li>Canon 18-45mm f.4.5 - 6.3</li>
+        </ul>
       </div>
       <Footer />
     </div>

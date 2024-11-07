@@ -555,6 +555,20 @@ footer {
   text-transform: none;
 }
 
+.experience-section {
+  padding: 2rem;
+}
+
+.experience-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.experience-container p {
+  color: var(--accent-color);
+}
+
 .scope-slide-container {
   display: flex;
   white-space: nowrap;
