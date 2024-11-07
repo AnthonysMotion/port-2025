@@ -6,12 +6,11 @@ import Footer from '../components/Footer';
 
 const Home = () => {
   const projects = [
+    { id: 6, title: 'Photography Portfolio', type: 'Photography', brand: 'Miscellaneous', hoverImageUrl: `${process.env.PUBLIC_URL}/img/5.gif`, link: '/photography' },
     { id: 0, title: 'Lenovo Hero Stories', type: 'Social Media', brand: 'Lenovo', hoverImageUrl: `${process.env.PUBLIC_URL}/img/0.gif`, link: '/1' },
     { id: 1, title: 'Nova Esports', type: 'Brand Direction', brand: 'Nova Esports', hoverImageUrl: `${process.env.PUBLIC_URL}/img/1.gif`, link: '/2' },
-    { id: 2, title: 'One NZ Warriors', type: 'Brand Direction', brand: 'NZ Warriors', hoverImageUrl: `${process.env.PUBLIC_URL}/img/2.png`, link: '/3' },
     { id: 3, title: 'Discord Advert', type: 'Animation', brand: 'Discord', hoverImageUrl: `${process.env.PUBLIC_URL}/img/3.gif`, link: '/4' },
-    { id: 4, title: 'NIP Logo Animation', type: 'Animation', brand: 'NIP', hoverImageUrl: `${process.env.PUBLIC_URL}/img/4.gif`, link: '/5' },
-    { id: 5, title: 'R6 Esports', type: 'Brand Direction', brand: 'XP Esports', hoverImageUrl: `${process.env.PUBLIC_URL}/img/5.gif`, link: '/6' }
+    { id: 4, title: 'Logo Animations', type: 'Animation', brand: 'Miscellaneous', hoverImageUrl: `${process.env.PUBLIC_URL}/img/4.gif`, link: '/5' }
   ];
 
   const images = [
@@ -208,7 +207,7 @@ const Home = () => {
         </div>
       </div>
       <div className="works-section" onMouseMove={handleMouseMove}>
-        <h2 style={{ textAlign: 'center', color: 'white' }}>FEATURED WORKS</h2>
+        <h2 style={{ textAlign: 'center', color: 'white' }}>FEATURED WORK</h2>
         <div className="works-container">
           {projects.map((project) => (
             <div
@@ -270,8 +269,8 @@ const Home = () => {
           <span className="promo-letter">I</span> <span className="promo-letter">extract</span> <span className="promo-letter">beauty</span> <span className="promo-letter">from </span> <span className="promo-letter">purpose</span> <span className="promo-letter">to</span> <span className="promo-letter">get</span> <span className="promo-letter">your</span> <span className="promo-letter">brand </span> <span className="promo-letter color">higher</span><span className="promo-letter">,</span> <span className="promo-letter">your</span> <span className="promo-letter">vision</span> <span className="promo-letter color">farther</span><span className="promo-letter">,</span><span className="promo-letter">and</span> <span className="promo-letter">your</span> <span className="promo-letter">impact</span> <span className="promo-letter color">harder</span><span className="promo-letter">.</span>
         </h1>
         <div className='pso-img'>
-          <img src={`${process.env.PUBLIC_URL}/img/img-1.png`} className='pso-img-1'></img>
-          <img src={`${process.env.PUBLIC_URL}/img/img-2.png`} className='pso-img-2'></img>
+          <img src={`${process.env.PUBLIC_URL}/img/img-1.png`} className='pso-img-1' alt='anth img1'></img>
+          <img src={`${process.env.PUBLIC_URL}/img/img-2.png`} className='pso-img-2' alt='anth img2'></img>
         </div>
       </div>
       <Footer />

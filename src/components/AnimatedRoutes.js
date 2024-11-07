@@ -13,7 +13,7 @@ import Three from '../pages/projects/Three';
 import Four from '../pages/projects/Four';
 import Five from '../pages/projects/Five';
 import Six from '../pages/projects/Six';
-
+import Seven from '../pages/projects/Seven';
 
 function AnimatedRoutes() {
     const location = useLocation();
@@ -30,12 +30,13 @@ function AnimatedRoutes() {
             <Route path="/work" element={<Work />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/0" element={<One />} />
-            <Route path="/1" element={<Two />} />
-            <Route path="/2" element={<Three />} />
-            <Route path="/3" element={<Four />} />
-            <Route path="/4" element={<Five />} />
-            <Route path="/5" element={<Six />} />
+            <Route path="/lenovo" element={<One />} />
+            <Route path="/nova-esports" element={<Two />} />
+            <Route path="/nz-warriors" element={<Three />} />
+            <Route path="/discord" element={<Four />} />
+            <Route path="/logo-animations" element={<Five />} />
+            <Route path="/xpe" element={<Six />} />
+            <Route path="/photography" element={<Seven />} />
           </Routes>
         </CSSTransition>
       </TransitionGroup>

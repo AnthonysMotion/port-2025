@@ -1,6 +1,5 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { animateText } from '../components/gsap';
 import Footer from '../components/Footer';
 
 
@@ -15,8 +14,7 @@ const About = () => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
       if (imgRef.current) {
-        // Move the image slower than the scroll
-        imgRef.current.style.transform = `translateY(${scrollY * 0.3}px)`; // Adjust the factor as needed
+        imgRef.current.style.transform = `translateY(${scrollY * 0.3}px)`;
       }
     };
 
@@ -26,17 +24,6 @@ const About = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
-  /*
-          <p>Hello!👋 I am a</p>
-        <h1>
-          <span className='font'>(</span>
-          <span className='font color'> Digital Designer </span>
-          <span className='font'>)</span><br />
-          <code>&lt;<span className='color'>DEVELOPER</span>/&gt;</code>
-        </h1>
-        <p>Based in Auckland, New Zealand.</p>
-  */
 
   return (
     <div className='container'>
@@ -48,7 +35,7 @@ const About = () => {
           <p><br />If you have a project in mind, <Link to="/contact">reach out!</Link> tttLet's create something extraordinary.</p>
         </div>
         <div className="about-img">
-          <img src={`${process.env.PUBLIC_URL}/img/img-2.png`} />
+          <img src={`${process.env.PUBLIC_URL}/img/img-2.png`} alt='anth img' />
         </div>
       </div>
       <div className='figures-section'>

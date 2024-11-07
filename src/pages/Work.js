@@ -1,6 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
-import { Link } from 'react-router-dom';
-import { animateText } from '../components/gsap';
+import React, { useEffect, useState } from 'react';
 import Footer from '../components/Footer';
 
 
@@ -10,12 +8,16 @@ const About = () => {
   }, []);
 
   const projects = [
-    { id: 0, title: 'Lenovo Hero Stories', type: 'Social Media', brand: 'Lenovo', hoverImageUrl: `${process.env.PUBLIC_URL}/img/0.gif`, link: '/1' },
-    { id: 1, title: 'Nova Esports', type: 'Brand Direction', brand: 'Nova Esports', hoverImageUrl: `${process.env.PUBLIC_URL}/img/1.gif`, link: '/2' },
-    { id: 2, title: 'One NZ Warriors', type: 'Brand Direction', brand: 'NZ Warriors', hoverImageUrl: `${process.env.PUBLIC_URL}/img/2.png`, link: '/3' },
-    { id: 3, title: 'Discord Advert', type: 'Animation', brand: 'Discord', hoverImageUrl: `${process.env.PUBLIC_URL}/img/3.gif`, link: '/4' },
-    { id: 4, title: 'NIP Logo Animation', type: 'Animation', brand: 'NIP', hoverImageUrl: `${process.env.PUBLIC_URL}/img/4.gif`, link: '/5' },
-    { id: 5, title: 'R6 Esports', type: 'Brand Direction', brand: 'XP Esports', hoverImageUrl: `${process.env.PUBLIC_URL}/img/5.gif`, link: '/6' }
+    { id: 6, title: 'Photography Portfolio', type: 'Photography', brand: 'Miscellaneous', hoverImageUrl: `${process.env.PUBLIC_URL}/img/5.gif`, link: '/photography' },
+    { id: 0, title: 'Lenovo Hero Stories', type: 'Social Media', brand: 'Lenovo', hoverImageUrl: `${process.env.PUBLIC_URL}/img/0.gif`, link: '/lenovo' },
+    { id: 1, title: 'Nova Esports', type: 'Brand Direction', brand: 'Nova Esports', hoverImageUrl: `${process.env.PUBLIC_URL}/img/1.gif`, link: '/nova-esports' },
+    { id: 2, title: 'One NZ Warriors', type: 'Brand Direction', brand: 'NZ Warriors', hoverImageUrl: `${process.env.PUBLIC_URL}/img/2.png`, link: '/nz-warriors' },
+    { id: 3, title: 'Discord Advert', type: 'Animation', brand: 'Discord', hoverImageUrl: `${process.env.PUBLIC_URL}/img/3.gif`, link: '/discord' },
+    { id: 4, title: 'Logo Animations', type: 'Animation', brand: 'Miscellaneous', hoverImageUrl: `${process.env.PUBLIC_URL}/img/4.gif`, link: '/logo-animations' },
+    { id: 5, title: 'XP Esports', type: 'Broadcasting', brand: 'XP Esports', hoverImageUrl: `${process.env.PUBLIC_URL}/img/5.gif`, link: '/xpe' },
+    { id: 7, title: 'N Hyper Esports', type: 'Photography', brand: 'Miscellaneous', hoverImageUrl: `${process.env.PUBLIC_URL}/img/5.gif`, link: '/nhyper' },
+    { id: 8, title: 'Konky Media Branding', type: 'Brand Direction', brand: 'Konky Media', hoverImageUrl: `${process.env.PUBLIC_URL}/img/5.gif`, link: '/konkymedia' },
+    { id: 9, title: 'Overt', type: 'Brand Direction', brand: 'Overt', hoverImageUrl: `${process.env.PUBLIC_URL}/img/5.gif`, link: '/overt' }
   ];
 
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
@@ -38,7 +40,6 @@ const About = () => {
   return (
     <div className='container'>
       <div className="works-section" onMouseMove={handleMouseMove} style={{ 'padding-top': '4rem' }}>
-        <h2 style={{ textAlign: 'center', color: 'white' }}>ALL WORK</h2>
         <div className="works-container">
           {projects.map((project) => (
             <div
