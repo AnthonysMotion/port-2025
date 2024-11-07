@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom'; // Import Link for client-side routing
 import Footer from '../components/Footer';
-
 
 const About = () => {
   useEffect(() => {
@@ -22,7 +22,6 @@ const About = () => {
 
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
 
-
   const [hoveredItem, setHoveredItem] = useState(null);
 
   const handleMouseMove = (e) => {
@@ -37,6 +36,10 @@ const About = () => {
     setHoveredItem(null);
   };
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className='container'>
       <div className="works-section" onMouseMove={handleMouseMove} style={{ 'padding-top': '4rem' }}>
@@ -48,11 +51,12 @@ const About = () => {
               onMouseEnter={() => handleMouseEnter(project.id)}
               onMouseLeave={handleMouseLeave}
             >
-              <a href={project.link} style={{ color: 'inherit', textDecoration: 'none', display: 'flex', width: '100%' }}>
+              {/* Replacing anchor <a> with Link */}
+              <Link to={project.link} style={{ color: 'inherit', textDecoration: 'none', display: 'flex', width: '100%' }}>
                 <p className="left-text">{project.brand}</p>
                 <h1>{project.title}</h1>
                 <p className="right-text">{project.type}</p>
-              </a>
+              </Link>
               {hoveredItem === project.id && (
                 <img
                   src={project.hoverImageUrl}

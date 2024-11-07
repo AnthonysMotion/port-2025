@@ -3,7 +3,11 @@ import Footer from '../../components/Footer';
 
 const Seven = () => {
   useEffect(() => {
-    document.title = "Anthony Thach | Contact";
+    document.title = "Anthony Thach | Photography";
+  }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
   }, []);
 
   const images = [

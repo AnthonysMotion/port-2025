@@ -3,7 +3,11 @@ import Footer from '../../components/Footer';
 
 const Zero = () => {
   useEffect(() => {
-    document.title = "Anthony Thach | Contact";
+    document.title = "Anthony Thach | Lenovo";
+  }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
   }, []);
 
   return (

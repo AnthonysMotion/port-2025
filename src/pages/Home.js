@@ -72,7 +72,7 @@ const Home = () => {
     if (window.innerWidth > 600) {
       animateText();
     }
-    document.title = "Anthony Thach | Work";
+    document.title = "Anthony Thach | Home";
   }, []);
 
   useEffect(() => {
@@ -220,11 +220,12 @@ const Home = () => {
               onMouseEnter={() => handleMouseEnter(project.id)}
               onMouseLeave={handleMouseLeave}
             >
-              <a href={project.link} style={{ color: 'inherit', textDecoration: 'none', display: 'flex', width: '100%' }}>
+              {/* Replaced <a> with <Link> for internal routing */}
+              <Link to={project.link} style={{ color: 'inherit', textDecoration: 'none', display: 'flex', width: '100%' }}>
                 <p className="left-text">{project.brand}</p>
                 <h1>{project.title}</h1>
                 <p className="right-text">{project.type}</p>
-              </a>
+              </Link>
               {hoveredItem === project.id && (
                 <img
                   src={project.hoverImageUrl}
