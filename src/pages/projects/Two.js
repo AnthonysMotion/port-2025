@@ -45,7 +45,7 @@ const One = () => {
         </div>
 
         <h1>N HYPER ESPORTS</h1>
-        <p>A sub brand of Nova Esports, sponsored by HyperLive, is a brand created to compete in the North American PUBG Mobile League</p>
+        <p>Sponsored by HyperLive, N Hyper Esports is a sub brand created by Nova Esports to compete in the North American PUBG Mobile League</p>
         <div className="nova-image-grid">
           <img src={`${process.env.PUBLIC_URL}/img/projects/nh1.png`} alt="Nova Esports 1" />
           <img src={`${process.env.PUBLIC_URL}/img/projects/nh2.png`} alt="Nova Esports 1" />
