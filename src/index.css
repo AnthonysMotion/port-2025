@@ -197,7 +197,32 @@ body {
 .works-section h2 {
   font-size: 15px;
   padding: 2rem;
-  padding-bottom: 3rem;
+}
+
+.work-vaw {
+  color: white;
+  font-size: 15px;
+  padding: 2rem;
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.work-vaw:hover {
+  color: var(--accent-color);
+  transition: .3s ease;
+}
+
+.work-vaw a:hover {
+  animation: workFontChange 0.6s forwards;
+}
+
+.work-vaw a.active {
+  color: var(--accent-color);
+}
+
+.work-vaw a:not(.active) {
+  animation: workFontRevert 0.6s forwards;
 }
 
 .works-container {
@@ -721,6 +746,8 @@ button:hover {
   margin-right: 1rem;
   padding-top: 1rem;
 }
+
+/* work */
 
 /* responsive */
 

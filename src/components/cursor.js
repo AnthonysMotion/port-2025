@@ -30,7 +30,7 @@ const CustomCursor = () => {
 
     const handleMouseOver = (e) => {
       if (
-        (e.target.matches('a, button, input, textarea, select, img') ||
+        (e.target.matches('a, button, input, textarea, select, img, link, hover-element') ||
          e.target.closest('a')?.querySelector('i')) &&
         !e.target.classList.contains('parallax-header-bg')
       ) {

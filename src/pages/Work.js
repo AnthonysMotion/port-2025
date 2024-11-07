@@ -37,8 +37,8 @@ const About = () => {
 
   return (
     <div className='container'>
-      <div className="works-section" onMouseMove={handleMouseMove}>
-        <h2 style={{ textAlign: 'center', color: 'white' }}>FEATURED WORKS</h2>
+      <div className="works-section" onMouseMove={handleMouseMove} style={{ 'padding-top': '4rem' }}>
+        <h2 style={{ textAlign: 'center', color: 'white' }}>ALL WORK</h2>
         <div className="works-container">
           {projects.map((project) => (
             <div
@@ -73,8 +73,6 @@ const About = () => {
       </div>
       <Footer />
     </div>
-
-
   );
 };
 

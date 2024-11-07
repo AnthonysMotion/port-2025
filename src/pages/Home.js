@@ -240,6 +240,7 @@ const Home = () => {
             </div>
           ))}
         </div>
+        <Link to="/work" className='work-vaw'>View all work</Link>
       </div>
 
       {/* mobile work */}
