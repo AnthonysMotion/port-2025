@@ -2,19 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Page Not Found</title>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <title>Redirecting...</title>
   <script type="text/javascript">
-    (function() {
-      var pathname = window.location.pathname;
+    var basePath = "/port-2025";
+    
+    var redirectUrl = basePath + "/index.html" + window.location.pathname + window.location.search + window.location.hash;
 
-      if (!pathname.startsWith('/port-2025')) {
-        window.location.replace('/port-2025' + pathname + window.location.search + window.location.hash);
-      }
-    })();
+    window.location.replace(redirectUrl);
   </script>
 </head>
 <body>
-  <h1>Page Not Found</h1>
-  <p>Redirecting you to the homepage...</p>
+  <h1>Redirecting...</h1>
+  <p>If you are not redirected automatically, <a id="redirect-link" href="/port-2025/index.html">click here</a>.</p>
 </body>
 </html>
