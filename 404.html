@@ -5,17 +5,17 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
-  <title>Redirecting...</title>
+  <title>Page Not Found</title>
   <script type="text/javascript">
     var basePath = "/port-2025";
     
-    var redirectUrl = basePath + "/index.html" + window.location.pathname + window.location.search + window.location.hash;
-
-    window.location.replace(redirectUrl);
+    if (window.location.pathname !== basePath + "/") {
+      window.location.replace(basePath);
+    }
   </script>
 </head>
 <body>
-  <h1>Redirecting...</h1>
-  <p>If you are not redirected automatically, <a id="redirect-link" href="/port-2025/index.html">click here</a>.</p>
+  <h1>balls bro</h1>
+  <p><a href="/port-2025">click here</a> to return to the home page.</p>
 </body>
 </html>
