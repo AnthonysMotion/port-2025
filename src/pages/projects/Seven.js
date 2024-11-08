@@ -62,7 +62,7 @@ const Seven = () => {
             </div>
           ))}
         </div>
-        <h2 style={{ "padding-top": "2rem" }}>These images were shot on:</h2>
+        <h2 style={{ "padding-top": "2rem" }}>These images were taken with:</h2>
         <ul>
           <li>Canon EOS R10</li>
           <li>Canon EOS 60D</li>
