@@ -91,12 +91,14 @@ export const animateText = () => {
     {
       y: 50,
       opacity: 0,
+      filter: "blur(10px)"
     },
     {
       duration: 0.6,
       y: 0,
       opacity: 1,
       stagger: 0.04,
+      filter: "blur(0px)",
       ease: "power3.out",
       delay: 0,
       onComplete: () => {
@@ -107,7 +109,7 @@ export const animateText = () => {
 
   gsap.fromTo(".hero h1",
     {
-      scale: 1.5
+      scale: 1.5,
     },
     {
       scale: 1,
@@ -120,7 +122,7 @@ export const animateText = () => {
   gsap.fromTo(".parallax-header-bg",
     {
       opacity: 0,
-      scale: 2.5
+      scale: 2.5,
     },
     {
       opacity: 1,
@@ -135,6 +137,7 @@ export const animateText = () => {
     {
       y: -50,
       opacity: 0,
+      filter: "blur(10px)"
     },
     {
       duration: animationDuration,
@@ -143,6 +146,7 @@ export const animateText = () => {
       stagger: 0.5,
       ease: "power3.out",
       delay: animationDuration,
+      filter: "blur(0px)"
     }
   );
 
@@ -150,10 +154,12 @@ export const animateText = () => {
     {
       y: -50,
       opacity: 0,
+      filter: "blur(10px)"
     },
     {
       duration: animationDuration,
       y: 0,
+      filter: "blur(0px)",
       opacity: 1,
       stagger: 0.2,
       ease: "power3.out",
@@ -165,10 +171,12 @@ export const animateText = () => {
     {
       y: -50,
       opacity: 0,
+      filter: "blur(10px)"
     },
     {
       duration: animationDuration,
       y: 0,
+      filter: "blur(0px)",
       opacity: 1,
       stagger: 0.2,
       ease: "power3.out",
@@ -180,6 +188,7 @@ export const animateText = () => {
     {
       y: 50,
       opacity: 0,
+      filter: "blur(10px)"
     },
     {
       duration: animationDuration,
@@ -188,6 +197,7 @@ export const animateText = () => {
       stagger: 0.2,
       ease: "power3.out",
       delay: animationDuration + 1.5,
+      filter: "blur(0px)"
     }
   );
 
@@ -195,6 +205,7 @@ export const animateText = () => {
     {
       y: 50,
       opacity: 0,
+      filter: "blur(10px)"
     },
     {
       duration: animationDuration,
@@ -203,6 +214,7 @@ export const animateText = () => {
       stagger: 0.2,
       ease: "power3.out",
       delay: animationDuration + 1.2,
+      filter: "blur(0px)"
     }
   );
 
@@ -210,6 +222,7 @@ export const animateText = () => {
     {
       y: 50,
       opacity: 0,
+      filter: "blur(10px)"
     },
     {
       duration: animationDuration,
@@ -218,6 +231,7 @@ export const animateText = () => {
       stagger: 0.2,
       ease: "power3.out",
       delay: animationDuration + 0.9,
+      filter: "blur(00px)"
     }
   );
 };
