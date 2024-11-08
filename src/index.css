@@ -845,6 +845,27 @@ button:hover {
   object-fit: cover;
 }
 
+/* warriors */
+
+.warriors-landing {
+  padding: 2rem;
+  padding-top: 4rem;
+  height: 30vh;
+  align-items: center;
+  padding-bottom: 0;
+}
+
+.warriors-grid1 {
+  padding: 2rem;
+  padding-top: 0;
+  max-width: 75%;
+  display: flex;
+  align-content: right;
+  justify-content: center;
+}
+
+/* responsive */
+
 @media (max-width: 768px) {
   .nova-image-grid {
     grid-template-columns: 1fr 1fr; 
@@ -856,9 +877,6 @@ button:hover {
     grid-template-columns: 1fr;
   }
 }
-
-
-/* responsive */
 
 @media only screen and (max-width: 1500px) {
 }
