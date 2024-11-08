@@ -760,6 +760,27 @@ button:hover {
 
 /* photography */
 
+.photo-grid {
+  padding: 2rem;
+  padding-top: 4rem;
+}
+
+.photo-grid-row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.photo-grid-column {
+  flex: 15%;
+  padding: 0 4px;
+}
+
+.photo-grid-column img {
+  margin-top: 8px;
+  width: 100%;
+  vertical-align: middle;
+}
 
 /* lenovo */
 
@@ -905,6 +926,19 @@ button:hover {
     flex: none;
     width: 90vw;
   }
+
+  .photo-grid-column {
+    flex: 30%;
+    padding: 0 4px;
+  }
+
+  .about-landing {
+    max-width: 100%;
+  }
+
+  .about-img {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -964,6 +998,11 @@ button:hover {
   .pso-img {
     display: hidden;
     opacity: 0;
+  }
+
+  .photo-grid-column {
+    flex: 40%;
+    padding: 0 4px;
   }
 }
 

@@ -62,7 +62,6 @@ const About = () => {
             </ul>
           </div>
         </div>
-
       </div>
 
       <div className='figures-section'>

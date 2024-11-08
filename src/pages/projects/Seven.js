@@ -74,31 +74,6 @@ const Seven = () => {
         </ul>
       </div>
       <Footer />
-      <style>
-        {`
-          .photo-grid {
-            padding: 2rem;
-            padding-top: 4rem;
-          }
-
-          .photo-grid-row {
-            display: flex;
-            flex-wrap: wrap;
-            padding: 0 4px;
-          }
-
-          .photo-grid-column {
-            flex: 15%;
-            padding: 0 4px;
-          }
-
-          .photo-grid-column img {
-            margin-top: 8px;
-            width: 100%;
-            vertical-align: middle;
-          }
-        `}
-      </style>
     </div>
   );
 };
