@@ -60,6 +60,7 @@ export const animateText = () => {
     );
   });
 
+
 /*
   const workItems = document.querySelectorAll('.work-item');
 
@@ -67,12 +68,11 @@ export const animateText = () => {
     gsap.fromTo(item,
       { 
         opacity: 0, 
-        y: 50,
       },
       {
         opacity: 1,
         y: 0,
-        duration: 0.3,
+        duration: 0.1,
         ease: "power3.out",
         scrollTrigger: {
           trigger: item,
@@ -85,7 +85,6 @@ export const animateText = () => {
     );
   });
    */
-  
 
   gsap.fromTo(".hero h1 .letter, .hero h1 span",
     {

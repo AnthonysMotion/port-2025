@@ -856,12 +856,24 @@ button:hover {
 }
 
 .warriors-grid1 {
-  padding: 2rem;
-  padding-top: 0;
-  max-width: 75%;
   display: flex;
-  align-content: right;
+  padding: 2rem;
+  padding-top: auto;
+  max-width: 75%;
+  
+}
+
+.warriors-desc {
+  padding: 2rem;
+}
+
+.warriors-desc-grid {
+  display: block;
   justify-content: center;
+}
+
+.warriors-desc-grid img {
+  max-width: 100%;
 }
 
 /* responsive */
