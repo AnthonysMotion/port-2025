@@ -8,21 +8,23 @@ const About = () => {
   }, []);
 
   const projects = [
-    { id: 6, title: 'Photography Portfolio', type: 'Photography', brand: 'Miscellaneous', hoverImageUrl: `${process.env.PUBLIC_URL}/img/6.png`, link: '/photography' },
-    { id: 0, title: 'Lenovo Hero Stories', type: 'Social Media', brand: 'Lenovo', hoverImageUrl: `${process.env.PUBLIC_URL}/img/0.gif`, link: '/lenovo' },
-    { id: 1, title: 'Nova Esports', type: 'Brand Direction', brand: 'Nova Esports', hoverImageUrl: `${process.env.PUBLIC_URL}/img/1.gif`, link: '/nova-esports' },
-    { id: 2, title: 'One NZ Warriors', type: 'Brand Direction', brand: 'NZ Warriors', hoverImageUrl: `${process.env.PUBLIC_URL}/img/2.png`, link: '/nz-warriors' },
-    { id: 3, title: 'Discord Advert', type: 'Animation', brand: 'Discord', hoverImageUrl: `${process.env.PUBLIC_URL}/img/3.gif`, link: '/discord' },
-    { id: 4, title: 'Logo Animations', type: 'Animation', brand: 'Miscellaneous', hoverImageUrl: `${process.env.PUBLIC_URL}/img/4.gif`, link: '/logo-animations' },
-    { id: 5, title: 'XP Esports', type: 'Broadcasting', brand: 'XP Esports', hoverImageUrl: `${process.env.PUBLIC_URL}/img/5.gif`, link: '/xpe' },
-    { id: 7, title: 'N Hyper Esports', type: 'Photography', brand: 'Miscellaneous', hoverImageUrl: `${process.env.PUBLIC_URL}/img/5.gif`, link: '/nhyper' },
-    { id: 8, title: 'Konky Media Branding', type: 'Brand Direction', brand: 'Konky Media', hoverImageUrl: `${process.env.PUBLIC_URL}/img/5.gif`, link: '/konkymedia' },
-    { id: 9, title: 'Overt', type: 'Brand Direction', brand: 'Overt', hoverImageUrl: `${process.env.PUBLIC_URL}/img/5.gif`, link: '/overt' }
+    { id: 6, title: 'Photography Portfolio', type: 'Photography', brand: 'Miscellaneous', imageUrl: `${process.env.PUBLIC_URL}/img/6.png`, hoverImageUrl: `${process.env.PUBLIC_URL}/img/6.png`, link: '/photography' },
+    { id: 0, title: 'Lenovo Hero Stories', type: 'Social Media', brand: 'Lenovo', imageUrl: `${process.env.PUBLIC_URL}/img/6.png`, hoverImageUrl: `${process.env.PUBLIC_URL}/img/0.gif`, link: '/lenovo' },
+    { id: 1, title: 'Nova Esports', type: 'Brand Direction', brand: 'Nova Esports', imageUrl: `${process.env.PUBLIC_URL}/img/6.png`, hoverImageUrl: `${process.env.PUBLIC_URL}/img/1.gif`, link: '/nova-esports' },
+    { id: 2, title: 'One NZ Warriors', type: 'Brand Direction', brand: 'NZ Warriors', imageUrl: `${process.env.PUBLIC_URL}/img/6.png`, hoverImageUrl: `${process.env.PUBLIC_URL}/img/2.png`, link: '/nz-warriors' },
+    { id: 3, title: 'Discord Advert', type: 'Animation', brand: 'Discord', imageUrl: `${process.env.PUBLIC_URL}/img/6.png`, hoverImageUrl: `${process.env.PUBLIC_URL}/img/3.gif`, link: '/discord' },
+    { id: 4, title: 'Logo Animations', type: 'Animation', brand: 'Miscellaneous', imageUrl: `${process.env.PUBLIC_URL}/img/6.png`, hoverImageUrl: `${process.env.PUBLIC_URL}/img/4.gif`, link: '/logo-animations' },
+    { id: 5, title: 'XP Esports', type: 'Broadcasting', brand: 'XP Esports', imageUrl: `${process.env.PUBLIC_URL}/img/6.png`, hoverImageUrl: `${process.env.PUBLIC_URL}/img/5.gif`, link: '/xpe' },
+    { id: 7, title: 'N Hyper Esports', type: 'Photography', brand: 'Miscellaneous', imageUrl: `${process.env.PUBLIC_URL}/img/6.png`, hoverImageUrl: `${process.env.PUBLIC_URL}/img/5.gif`, link: '/nhyper' },
+    { id: 8, title: 'Konky Media Branding', type: 'Brand Direction', brand: 'Konky Media', imageUrl: `${process.env.PUBLIC_URL}/img/6.png`, hoverImageUrl: `${process.env.PUBLIC_URL}/img/5.gif`, link: '/konkymedia' },
+    { id: 9, title: 'Overt', type: 'Brand Direction', brand: 'Overt', imageUrl: `${process.env.PUBLIC_URL}/img/6.png`, hoverImageUrl: `${process.env.PUBLIC_URL}/img/5.gif`, link: '/overt' }
   ];
 
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
 
   const [hoveredItem, setHoveredItem] = useState(null);
+
+  const [hoveredProjectId, setHoveredProjectId] = useState(null);
 
   const handleMouseMove = (e) => {
     setCursorPosition({ x: e.clientX, y: e.clientY });
@@ -72,6 +74,26 @@ const About = () => {
                   }}
                 />
               )}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* mobile work */}
+
+      <div className='mobile-portfolio-section'>
+        <div className='mobile-portfolio-grid'>
+          {projects.map(project => (
+            <div key={project.id} className='mobile-portfolio-item'
+              onMouseEnter={() => setHoveredProjectId(project.id)}
+              onMouseLeave={() => setHoveredProjectId(null)}>
+              <Link to={project.link}>
+                <img
+                  src={hoveredProjectId === project.id ? project.hoverImageUrl : project.imageUrl}
+                  alt={project.title}
+                />
+                <h3>{project.title}</h3>
+              </Link>
             </div>
           ))}
         </div>

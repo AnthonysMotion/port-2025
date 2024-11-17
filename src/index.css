@@ -905,11 +905,11 @@ button:hover {
   .mobile-portfolio-grid {
     display: grid;
     max-width: 100%;
-  }
+}
 
-  .works-section {
+.works-section {
     display: none;
-  }
+}
 
   .promo-section-one h1 span {
     font-size: 45px;
