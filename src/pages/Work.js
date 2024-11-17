@@ -15,9 +15,6 @@ const About = () => {
     { id: 3, title: 'Discord Advert', type: 'Animation', brand: 'Discord', imageUrl: `${process.env.PUBLIC_URL}/img/6.png`, hoverImageUrl: `${process.env.PUBLIC_URL}/img/3.gif`, link: '/discord' },
     { id: 4, title: 'Logo Animations', type: 'Animation', brand: 'Miscellaneous', imageUrl: `${process.env.PUBLIC_URL}/img/6.png`, hoverImageUrl: `${process.env.PUBLIC_URL}/img/4.gif`, link: '/logo-animations' },
     { id: 5, title: 'XP Esports', type: 'Broadcasting', brand: 'XP Esports', imageUrl: `${process.env.PUBLIC_URL}/img/6.png`, hoverImageUrl: `${process.env.PUBLIC_URL}/img/5.gif`, link: '/xpe' },
-    { id: 7, title: 'N Hyper Esports', type: 'Photography', brand: 'Miscellaneous', imageUrl: `${process.env.PUBLIC_URL}/img/6.png`, hoverImageUrl: `${process.env.PUBLIC_URL}/img/5.gif`, link: '/nhyper' },
-    { id: 8, title: 'Konky Media Branding', type: 'Brand Direction', brand: 'Konky Media', imageUrl: `${process.env.PUBLIC_URL}/img/6.png`, hoverImageUrl: `${process.env.PUBLIC_URL}/img/5.gif`, link: '/konkymedia' },
-    { id: 9, title: 'Overt', type: 'Brand Direction', brand: 'Overt', imageUrl: `${process.env.PUBLIC_URL}/img/6.png`, hoverImageUrl: `${process.env.PUBLIC_URL}/img/5.gif`, link: '/overt' }
   ];
 
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
