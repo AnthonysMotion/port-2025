@@ -32,7 +32,7 @@ function App() {
   }, []);
 
   return (
-    <Router basename="/port-2025">
+    <Router basename="/">
       <div id="root">
         <Nav />
         <CustomCursor />
