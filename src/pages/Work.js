@@ -9,12 +9,9 @@ const About = () => {
 
   const projects = [
     { id: 6, title: 'Photography Portfolio', type: 'Photography', brand: 'Miscellaneous', imageUrl: `${process.env.PUBLIC_URL}/img/6.png`, hoverImageUrl: `${process.env.PUBLIC_URL}/img/6.png`, link: '/photography' },
-    { id: 0, title: 'Lenovo Hero Stories', type: 'Social Media', brand: 'Lenovo', imageUrl: `${process.env.PUBLIC_URL}/img/6.png`, hoverImageUrl: `${process.env.PUBLIC_URL}/img/0.gif`, link: '/lenovo' },
-    { id: 1, title: 'Nova Esports', type: 'Brand Direction', brand: 'Nova Esports', imageUrl: `${process.env.PUBLIC_URL}/img/6.png`, hoverImageUrl: `${process.env.PUBLIC_URL}/img/1.gif`, link: '/nova-esports' },
-    { id: 2, title: 'One NZ Warriors', type: 'Brand Direction', brand: 'NZ Warriors', imageUrl: `${process.env.PUBLIC_URL}/img/6.png`, hoverImageUrl: `${process.env.PUBLIC_URL}/img/2.png`, link: '/nz-warriors' },
-    { id: 3, title: 'Discord Advert', type: 'Animation', brand: 'Discord', imageUrl: `${process.env.PUBLIC_URL}/img/6.png`, hoverImageUrl: `${process.env.PUBLIC_URL}/img/3.gif`, link: '/discord' },
-    { id: 4, title: 'Logo Animations', type: 'Animation', brand: 'Miscellaneous', imageUrl: `${process.env.PUBLIC_URL}/img/6.png`, hoverImageUrl: `${process.env.PUBLIC_URL}/img/4.gif`, link: '/logo-animations' },
-    { id: 5, title: 'XP Esports', type: 'Broadcasting', brand: 'XP Esports', imageUrl: `${process.env.PUBLIC_URL}/img/6.png`, hoverImageUrl: `${process.env.PUBLIC_URL}/img/5.gif`, link: '/xpe' },
+    { id: 0, title: 'Lenovo Hero Stories', type: 'Social Media', brand: 'Lenovo', imageUrl: `${process.env.PUBLIC_URL}/img/projects/5.png`, hoverImageUrl: `${process.env.PUBLIC_URL}/img/0.gif`, link: '/lenovo' },
+    { id: 1, title: 'Nova Esports', type: 'Brand Direction', brand: 'Nova Esports', imageUrl: `${process.env.PUBLIC_URL}/img/projects/4.png`, hoverImageUrl: `${process.env.PUBLIC_URL}/img/1.gif`, link: '/nova-esports' },
+    { id: 2, title: 'One NZ Warriors', type: 'Brand Direction', brand: 'NZ Warriors', imageUrl: `${process.env.PUBLIC_URL}/img/projects/9.png`, hoverImageUrl: `${process.env.PUBLIC_URL}/img/2.png`, link: '/nz-warriors' },
   ];
 
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
